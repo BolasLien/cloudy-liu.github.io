@@ -2,12 +2,12 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <sitemap>
-        <loc>http://yoursite.com/post-sitemap.xml</loc>
+        <loc>https://www.liuyun.fun/post-sitemap.xml</loc>
         <lastmod>2018-04-06T11:48:17.604Z</lastmod>
     </sitemap>
 
     <sitemap>
-        <loc>http://yoursite.com/tag-sitemap.xml</loc>
+        <loc>https://www.liuyun.fun/tag-sitemap.xml</loc>
         <lastmod>2018-04-06T11:41:44.565Z</lastmod>
     </sitemap>
 
