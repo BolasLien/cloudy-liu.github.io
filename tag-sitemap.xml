@@ -9,20 +9,6 @@
     </url>
 
     <url>
-        <loc>https://www.liuyun.fun/tags/github/</loc>
-        <lastmod>2018-04-06T11:46:41.133Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.liuyun.fun/tags/%E5%8D%9A%E5%AE%A2/</loc>
-        <lastmod>2018-04-06T11:46:41.133Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://www.liuyun.fun/tags/%E7%8B%AC%E7%AB%8B%E5%9F%9F%E5%90%8D/</loc>
         <lastmod>2018-04-06T11:46:41.133Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -30,15 +16,29 @@
     </url>
 
     <url>
-        <loc>https://www.liuyun.fun/tags/Hexo/</loc>
+        <loc>https://www.liuyun.fun/tags/Test/</loc>
         <lastmod>2018-04-06T13:54:25.739Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://www.liuyun.fun/tags/Test/</loc>
-        <lastmod>2018-04-06T13:54:25.739Z</lastmod>
+        <loc>https://www.liuyun.fun/tags/Hexo/</loc>
+        <lastmod>2018-04-06T14:00:57.232Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.liuyun.fun/tags/github/</loc>
+        <lastmod>2018-04-06T14:00:57.232Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.liuyun.fun/tags/%E5%8D%9A%E5%AE%A2/</loc>
+        <lastmod>2018-04-06T14:00:57.232Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
