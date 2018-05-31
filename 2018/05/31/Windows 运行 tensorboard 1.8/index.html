@@ -12,12 +12,12 @@
 <meta name="keywords" content="ML,Tensorflow">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Windows 运行 tensorboard 1.6">
-<meta property="og:url" content="https://www.liuyun.fun/2018/05/31/Windows 运行 tensorboard 1.6/index.html">
+<meta property="og:url" content="https://www.liuyun.fun/2018/05/31/Windows 运行 tensorboard 1.8/index.html">
 <meta property="og:site_name" content="YunShell">
 <meta property="og:description" content="本篇讲述一下 Windows 环境下如何运行 Tensorboard 可视化 graph.">
 <meta property="og:image" content="http://p5sfmckwy.bkt.clouddn.com/img/1.png">
 <meta property="og:image" content="http://p5sfmckwy.bkt.clouddn.com/img/2.png">
-<meta property="og:updated_time" content="2018-05-31T16:24:37.498Z">
+<meta property="og:updated_time" content="2018-05-31T16:35:48.957Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Windows 运行 tensorboard 1.6">
 <meta name="twitter:description" content="本篇讲述一下 Windows 环境下如何运行 Tensorboard 可视化 graph.">
@@ -174,7 +174,7 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Windows 运行 tensorboard 1.6" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Windows 运行 tensorboard 1.8" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -186,7 +186,7 @@ var _hmt = _hmt || [];
   
 
         
-        <a href="/2018/05/31/Windows 运行 tensorboard 1.6/" class="archive-article-date">
+        <a href="/2018/05/31/Windows 运行 tensorboard 1.8/" class="archive-article-date">
   	<time datetime="2018-05-31T15:10:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-31</time>
 </a>
         
@@ -197,9 +197,9 @@ var _hmt = _hmt || [];
         <p>本篇讲述一下 Windows 环境下如何运行 Tensorboard 可视化 graph.<a id="more"></a></p>
 <h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><ul>
 <li>Windows 7</li>
-<li>tensorflow 1.6</li>
+<li>tensorflow 1.6/1.8</li>
 </ul>
-<p><code>tensorlfow</code> 1.6 在 windows 上通过 <code>pip3 install tensorflow</code> 安装，同时会顺带安装 <code>tensorboard</code> 工具，1.6 版本已经修改过了文件路径，具体的使用方式，参看如下例子</p>
+<p><code>tensorlfow</code> 1.6 在 windows 上通过 <code>pip3 install tensorflow</code> 安装，同时会顺带安装 <code>tensorboard</code> 工具，1.6 版本已经修改过了文件路径，具体的使用方式，参看如下例子。本机是1.8版本，1.6 也同样适用。</p>
 <h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><h3 id="创建-model"><a href="#创建-model" class="headerlink" title="创建 model"></a>创建 model</h3><p>首先我们新建一个 <code>test.py</code>, 编写一个最简单的矩阵乘法，最后将其graph 保存下来，代码如下，</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line"></span><br><span class="line">x = tf.constant([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>], shape=[<span class="number">2</span>, <span class="number">3</span>], name=<span class="string">"x"</span>)</span><br><span class="line">w = tf.constant([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>], shape=[<span class="number">3</span>, <span class="number">2</span>], name=<span class="string">"w"</span>)</span><br><span class="line">b = tf.constant([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], shape=[<span class="number">2</span>, <span class="number">2</span>], name=<span class="string">"b"</span>)</span><br><span class="line">y = tf.matmul(x, w)+b <span class="comment"># 计算 y=x*w +b 的模型</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> tf.Session() <span class="keyword">as</span> sess:</span><br><span class="line">    rst = sess.run(y)</span><br><span class="line">    print(<span class="string">"rst:"</span>, rst)</span><br><span class="line">    tf.summary.FileWriter(<span class="string">"log"</span>, graph=sess.graph) <span class="comment"># 保存graph 到 当前文件 log目录下</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>输出结果</span><br><span class="line">rst: [[<span class="number">23</span> <span class="number">30</span>]</span><br><span class="line"> [<span class="number">52</span> <span class="number">68</span>]]</span><br></pre></td></tr></table></figure>
 <p>运行完毕后，会在文件的当前路径，创建一个 <code>log</code> 文件夹，里面存有 graph 的信息，我本地目录结构如下</p>
@@ -223,7 +223,7 @@ var _hmt = _hmt || [];
       YunShell
       <br>
       <strong>本文链接：</strong>
-      https://www.liuyun.fun/2018/05/31/Windows 运行 tensorboard 1.6/
+      https://www.liuyun.fun/2018/05/31/Windows 运行 tensorboard 1.8/
       <br>
       <strong>版权声明：</strong>本作品采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。转载请注明出处！
       <!-- <br>
@@ -328,7 +328,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://www.liuyun.fun/2018/05/31/Windows 运行 tensorboard 1.6/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://www.liuyun.fun/2018/05/31/Windows 运行 tensorboard 1.8/" alt="微信分享二维码">
     </div>
 </div>
 
