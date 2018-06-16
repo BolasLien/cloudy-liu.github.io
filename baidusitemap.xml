@@ -3,6 +3,25 @@
 
     
   <url>
+    <loc>https://www.liuyun.fun/2018/02/27/test/</loc>
+    <lastmod>2018-06-16T07:11:09.549Z</lastmod>
+    <data>
+        <display>
+        <title>博文样式测试</title>
+        <pubTime>2018-02-27T12:30:33.000Z</pubTime>
+        
+        <tag>Hexo </tag>
+         
+        <tag>Test </tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://www.liuyun.fun/2018/04/07/Hexo_yilia_%E4%B8%BB%E9%A2%98%E4%B8%80%E6%8F%BD%E5%AD%90%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/</loc>
     <lastmod>2018-06-16T06:37:06.476Z</lastmod>
     <data>
@@ -93,25 +112,6 @@
         <tag>github </tag>
          
         <tag>博客 </tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.liuyun.fun/2018/02/27/test/</loc>
-    <lastmod>2018-04-06T13:54:25.739Z</lastmod>
-    <data>
-        <display>
-        <title>博文样式测试</title>
-        <pubTime>2018-02-27T12:30:33.000Z</pubTime>
-        
-        <tag>Hexo </tag>
-         
-        <tag>Test </tag>
          
          
            
