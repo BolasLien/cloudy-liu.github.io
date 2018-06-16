@@ -26,7 +26,7 @@
 <meta property="og:image" content="http://p5sfmckwy.bkt.clouddn.com/img/3_6_qiniu_2.png">
 <meta property="og:image" content="http://p5sfmckwy.bkt.clouddn.com/img/3_6_3_qiniu_key.png">
 <meta property="og:image" content="http://p5sfmckwy.bkt.clouddn.com/img/3_6_qiniu_config.png">
-<meta property="og:updated_time" content="2018-04-07T14:19:17.425Z">
+<meta property="og:updated_time" content="2018-06-16T04:16:38.681Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo yilia 主题一揽子使用方案">
 <meta name="twitter:description" content="在用 Hexo 搭建完毕后，接着就寻找主题了，对比了几个主题">
@@ -259,8 +259,8 @@ var _hmt = _hmt || [];
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script  async  src=&quot;https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 <h3 id="添加统计网站访问量"><a href="#添加统计网站访问量" class="headerlink" title="添加统计网站访问量"></a>添加统计网站访问量</h3><p>修改 <code>themes\yilia\layout\_partial\footer.ejs</code>，包括访客数和站点访问总量</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># PV方式，单个用户连续点击 n 篇，记录 n 次记录值</span><br><span class="line">&lt;span id=&quot;busuanzi_container_site_pv&quot;&gt;    本站总访问量&lt;span id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/span&gt;次&lt;/span&gt;</span><br><span class="line"></span><br><span class="line"># UV方式，单个用户连续点击 n 篇，记录 1 次记录值</span><br><span class="line">&lt;span id=&quot;busuanzi_container_site_uv&quot;&gt;  本站访客数&lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt;人次&lt;/span&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="单篇文章点击量"><a href="#单篇文章点击量" class="headerlink" title="单篇文章点击量"></a>单篇文章点击量</h3><p>在需要显示的地方添加</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 使用 pv 记录方式，每访问一次，记录一次</span><br><span class="line">&lt;span id=&quot;busuanzi_container_page_pv&quot;&gt;  本文总阅读量&lt;span id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span&gt;次&lt;/span&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="单篇文章点击量"><a href="#单篇文章点击量" class="headerlink" title="单篇文章点击量"></a>单篇文章点击量</h3><p><code>themes\yilia\layout\_partial\article.ejs</code>中 在 <code>&lt;%- partial(&#39;post/title&#39;, {class_name: &#39;article-title&#39;}) %&gt;</code>  节点 插入如下代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--显示阅读次数--&gt;</span><br><span class="line">&lt;% if (!index &amp;&amp; post.comments)&#123; %&gt;</span><br><span class="line">  &lt;br/&gt;</span><br><span class="line">  &lt;a class=&quot;cloud-tie-join-count&quot; href=&quot;javascript:void(0);&quot; style=&quot;color:gray;font-size:14px;&quot;&gt;</span><br><span class="line">  &lt;span class=&quot;icon-sort&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;span id=&quot;busuanzi_container_page_pv&quot; style=&quot;color:#ef7522;font-size:14px;&quot;&gt;</span><br><span class="line">			阅读数: &lt;span id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span&gt;次 &amp;nbsp;&amp;nbsp;</span><br><span class="line">  &lt;/span&gt;</span><br><span class="line">  &lt;/a&gt;</span><br><span class="line">  &lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
 <h2 id="添加来必力评论系统"><a href="#添加来必力评论系统" class="headerlink" title="添加来必力评论系统"></a>添加来必力评论系统</h2><p><a href="http://www.zhoujy.me/2017/07/16/livere/" target="_blank" rel="noopener">点击这个链接</a> 查看</p>
 <h2 id="添加版权信息"><a href="#添加版权信息" class="headerlink" title="添加版权信息"></a>添加版权信息</h2><p><a href="https://blog.zscself.com/2017/01/25/ee4d9ecb/" target="_blank" rel="noopener">点击这个链接</a> 查看</p>
 <h2 id="插入网易云音乐"><a href="#插入网易云音乐" class="headerlink" title="插入网易云音乐"></a>插入网易云音乐</h2><ul>
@@ -477,7 +477,7 @@ var _hmt = _hmt || [];
 
 
   
-    <!-- 来必力City版安装代码 -->
+     <!-- <!-- 来必力City版安装代码 -->
 <div id="lv-container" data-id="city" data-uid="MTAyMC8zNDk2NS8xMTUwMg==">
     <script type="text/javascript">
        (function(d, s) {
@@ -494,8 +494,25 @@ var _hmt = _hmt || [];
     </script>
     <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
     </div>
-    <!-- City版安装代码已完成 -->
+    <!-- City版安装代码已完成 --> -->
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNDk2NS8xMTUwMg==">
+        <script type="text/javascript">
+           (function(d, s) {
+               var j, e = d.getElementsByTagName(s)[0];
+        
+               if (typeof LivereTower === 'function') { return; }
+        
+               j = d.createElement(s);
+               j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+               j.async = true;
+        
+               e.parentNode.insertBefore(j, e);
+           })(document, 'script');
+        </script>
+        <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+        </div>
     
+
   
   
   
@@ -622,10 +639,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Test</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">github</a>
               </li>
              
@@ -635,6 +648,14 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">独立域名</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">yilia</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Test</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -650,19 +671,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">yilia</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">北大经济学</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">ML</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Tensorflow</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">北大经济学</a>
               </li>
             
             <div class="clearfix"></div>
