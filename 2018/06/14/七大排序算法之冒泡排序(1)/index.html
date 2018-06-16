@@ -15,7 +15,7 @@
 <meta property="og:url" content="https://www.liuyun.fun/2018/06/14/七大排序算法之冒泡排序(1)/index.html">
 <meta property="og:site_name" content="YunShell">
 <meta property="og:description" content="这节开始总结一些基本的排序算法，先来看看最简单的冒泡算法。">
-<meta property="og:updated_time" content="2018-06-15T00:40:30.585Z">
+<meta property="og:updated_time" content="2018-06-16T12:06:05.816Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="七大排序算法之冒泡排序(1)">
 <meta name="twitter:description" content="这节开始总结一些基本的排序算法，先来看看最简单的冒泡算法。">
@@ -204,20 +204,47 @@ var _hmt = _hmt || [];
         <p>这节开始总结一些基本的排序算法，先来看看最简单的冒泡算法。<a id="more"></a> </p>
 <p>我们假设测试数据集为以下数组，要求按照从小到达的升序排列。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1,2,3,4,5,6,7,8,9,10  # 正序</span><br><span class="line">21,1,5,2,3,4,7,9,10   # 普通乱序</span><br><span class="line">10,9,8,7,6,5,4,3,2,1  # 逆序</span><br></pre></td></tr></table></figure>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>相邻比较和交换的方法。第一轮确定最右边的数最大，第二轮确定倒数第二大的数，一共有n-1轮要遍历。</p>
-<h3 id="流程举例"><a href="#流程举例" class="headerlink" title="流程举例"></a>流程举例</h3><p>我们以普通乱序的测试数据举例，数组长度为9，那么遍历 8 轮(n-1)。第一次</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">21,1,5,2,3,4,7,9,10 </span><br><span class="line">1,5,2,3,4,7,9,10,21 # 第一轮后 最大的21就冒到最后了，位置唯一确定</span><br><span class="line">1,2,3,4,5,7,9,10,21 # 第二轮后 已经全部有序了</span><br></pre></td></tr></table></figure>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>基于相邻比较和交换的方法。针对 n个数，一共会有 n-1 轮。每轮将确定一个值的最终位置，比如升序，那么每轮将会该轮中最大的数的位置确定。</p>
+<h3 id="流程举例"><a href="#流程举例" class="headerlink" title="流程举例"></a>流程举例</h3><p>参看动图  <a href="http://www.atool.org/sort.php" target="_blank" rel="noopener">http://www.atool.org/sort.php</a> </p>
 <h3 id="Java-实现"><a href="#Java-实现" class="headerlink" title="Java 实现"></a>Java 实现</h3><p>先实现交换的辅助函数</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span>[] a, <span class="keyword">int</span> indexI, <span class="keyword">int</span> indexJ)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (a == <span class="keyword">null</span> || indexI &gt;= a.length || indexJ &gt;= a.length) &#123;</span><br><span class="line">        System.out.println(<span class="string">"a is null ,index out of bound"</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> tmp = a[indexI];</span><br><span class="line">    a[indexI] = a[indexJ];</span><br><span class="line">    a[indexJ] = tmp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>冒泡排序实现</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">bubbleSort</span><span class="params">(<span class="keyword">int</span>[] input)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> rightSide = input.length;</span><br><span class="line">    <span class="keyword">while</span> (rightSide - <span class="number">1</span> &gt; <span class="number">0</span>) &#123; <span class="comment">// 控制比较次数，比较次数为 len-1</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; rightSide; i++) &#123; <span class="comment">//每轮下两两比较</span></span><br><span class="line">            <span class="keyword">if</span> (input[i - <span class="number">1</span>] &gt; input[i]) &#123;</span><br><span class="line">                swap(input, i - <span class="number">1</span>, i);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        --rightSide;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><p>排序算法的时间复杂度在于交换和比较的次数，因此交换和比较次数的总和越小，那么时间复杂度越低，冒泡排序一个有 n 轮的遍历，每轮遍历中，比较次数依次为 n-1,n-2,…1 。因此比较次数的总和为</p>
-<p>$sum=\sum_{1}^{n-1}=1+2+…+n-1=\dfrac{n(n-1)}{2}$ 为 $O(n^2)$</p>
-<p>最差情况下（逆序），那么比较一次，就要交换一次。而最好的情况下，已序的情况下，上述还是需要在比较n多次。</p>
 <h3 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h3><p>你可以看到，当测试集为正序时候，仍然需要$O(n^2)$ 的复杂度，其实每一轮遍历中，两两比较，若整个序列没有发生交换，其实排序就已经可以停止了，比如正序情况下，第一轮两两比较时，由于都是正序，所以一边遍历后没有任何交换，此时就需要停止了。若发生交换，则记录最后一个交换的位置，则该位置为下次交换遍历的终点位置。减少不必要的比较。代码如下</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">bubbleSortOpt</span><span class="params">(<span class="keyword">int</span>[] input)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> rightSide = input.length;</span><br><span class="line">    <span class="keyword">int</span> lastCompareIndex = rightSide;<span class="comment">//记录最后一个比较的右边界，同时充当哨兵，是否停止</span></span><br><span class="line">    <span class="keyword">while</span> (lastCompareIndex &gt; <span class="number">0</span>) &#123;<span class="comment">//是否要停止</span></span><br><span class="line">        lastCompareIndex = <span class="number">0</span>; <span class="comment">//若未发生交换，则会停止</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; rightSide; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (input[i - <span class="number">1</span>] &gt; input[i]) &#123;</span><br><span class="line">                swap(input, i - <span class="number">1</span>, i);</span><br><span class="line">                lastCompareIndex = i;<span class="comment">//记录最后一个发生交换的位置，下次比较的右边界</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这样复杂度，在最好的情况下（已经有序），可以变为$O(n)​$ </p>
+<p>这样复杂度，在最好的情况下（已经有序），可以变为$O(n)$ </p>
+<h3 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><p><strong>间复杂度</strong></p>
+<p>排序算法的时间复杂度在于交换和比较的次数，因此交换和比较次数的总和越小，那么时间复杂度越低，冒泡排序一个有 n -1 轮的遍历，每轮遍历中，比较次数依次为 n-1,n-2,…1 。因此比较次数的总和为</p>
+<p>$sum=\sum_{1}^{n-1}=1+2+…+n-1=\dfrac{n(n-1)}{2}$ 为 $O(n^2)$</p>
+<p>最差情况下（逆序），那么比较一次，就要交换一次。因此总次数为 n(n-1) ，为 $O(n^2)$ ，而最好的情况下，已序的情况下，经过优化后的冒泡为 n-1 次完成，$O(n)$ ,因此平均复杂度为 $O(n^2)$ 。</p>
+<p><strong>空间复杂度</strong></p>
+<p>因为都是固定的几个局部变量，因此空间复杂度为 O(1)</p>
+<p><strong>稳定性</strong></p>
+<p>因为是基于比较，所以冒泡排序是稳定，所谓稳定性就是指相等的两个数 a,b，排序后，a,b的前后位置不变，若a在b前，则排序后仍是a在b前，否则称为不稳定。</p>
+<h3 id="完整源码"><a href="#完整源码" class="headerlink" title="完整源码"></a>完整源码</h3><p><a href="https://github.com/cloudy-liu/DataStructureAndAlgorithm/blob/master/%E4%B8%83%E5%A4%A7%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/BubbleSort.java" target="_blank" rel="noopener">BubbleSort.java</a></p>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>冒泡排序基于交换和计较，基于改进后的冒泡，时间复杂度有所改善。最好情况已排好的状态下为 $O(n)$ ,完全最差情况下逆序情况下 $O(n^2)$ </p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>时间复杂度（最差）</th>
+<th>时间复杂度（最好）</th>
+<th>时间平均复杂度</th>
+<th>空间复杂度</th>
+<th>稳定性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>冒泡排序</td>
+<td>$O(n^2)$</td>
+<td>$O(n)$</td>
+<td>$O(n^2)$</td>
+<td>O(1)</td>
+<td>稳定</td>
+</tr>
+</tbody>
+</table>
 
       
 
@@ -348,8 +375,8 @@ var _hmt = _hmt || [];
 <nav id="article-nav">
   
   
-    <a href="/2018/05/31/Windows运行tensorboard1.8/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Windows 运行 tensorboard 1.6</div>
+    <a href="/2018/06/14/七大排序算法之选择排序(2)/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">七大排序算法之选择排序(2)</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -376,7 +403,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#思路"><span class="toc-number">1.</span> <span class="toc-text">思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#流程举例"><span class="toc-number">2.</span> <span class="toc-text">流程举例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Java-实现"><span class="toc-number">3.</span> <span class="toc-text">Java 实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#复杂度分析"><span class="toc-number">4.</span> <span class="toc-text">复杂度分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#优化"><span class="toc-number">5.</span> <span class="toc-text">优化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#总结"><span class="toc-number">6.</span> <span class="toc-text">总结</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#思路"><span class="toc-number">1.</span> <span class="toc-text">思路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#流程举例"><span class="toc-number">2.</span> <span class="toc-text">流程举例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Java-实现"><span class="toc-number">3.</span> <span class="toc-text">Java 实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#优化"><span class="toc-number">4.</span> <span class="toc-text">优化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#复杂度分析"><span class="toc-number">5.</span> <span class="toc-text">复杂度分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#完整源码"><span class="toc-number">6.</span> <span class="toc-text">完整源码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#总结"><span class="toc-number">7.</span> <span class="toc-text">总结</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -384,23 +411,6 @@ var _hmt = _hmt || [];
         
     </div>
 </aside>
-
-<div id="lv-container" data-id="city" data-uid="MTAyMC8zNzM4Ny8xMzkyMQ==">
-	<script type="text/javascript">
-   (function(d, s) {
-       var j, e = d.getElementsByTagName(s)[0];
-
-       if (typeof LivereTower === 'function') { return; }
-
-       j = d.createElement(s);
-       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-       j.async = true;
-
-       e.parentNode.insertBefore(j, e);
-   })(document, 'script');
-	</script>
-<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
-</div>
 
 
   
@@ -557,22 +567,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">yilia</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">HashMap</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">数据结构与算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">ML</a>
               </li>
              
@@ -581,11 +575,31 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">数据结构与算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">yilia</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">排序</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Test</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">北大经济学</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">HashMap</a>
               </li>
              
               <li class="article-tag-list-item">
