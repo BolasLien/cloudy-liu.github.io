@@ -82,10 +82,10 @@ share_jia: true
 duoshuo: false
 
 # 来必力
-livere: true
+livere: false
 
 #2、网易云跟帖
-wangyiyun: false
+wangyiyun: true
 
 #3、畅言
 changyan_appid: false
