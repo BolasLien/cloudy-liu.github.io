@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://www.liuyun.fun">
-  <title>Archives: 2018/7 | YunShell</title>
+  <title>求取质数素数的几种方式 | YunShell</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="YunShell">
-<meta property="og:type" content="website">
-<meta property="og:title" content="YunShell">
-<meta property="og:url" content="https://www.liuyun.fun/archives/2018/07/index.html">
+  <meta name="description" content="质数/素数在数学上定义为只能被1或者自身整除的数。道德经中的宇宙观为，“道生一，一生二，二生三，三生万物”。">
+<meta name="keywords" content="数据结构与算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="求取质数素数的几种方式">
+<meta property="og:url" content="https://www.liuyun.fun/2018/07/08/求取质数素数的几种方式/index.html">
 <meta property="og:site_name" content="YunShell">
-<meta property="og:description" content="YunShell">
+<meta property="og:description" content="质数/素数在数学上定义为只能被1或者自身整除的数。道德经中的宇宙观为，“道生一，一生二，二生三，三生万物”。">
+<meta property="og:updated_time" content="2018-07-08T17:21:12.514Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="YunShell">
-<meta name="twitter:description" content="YunShell">
+<meta name="twitter:title" content="求取质数素数的几种方式">
+<meta name="twitter:description" content="质数/素数在数学上定义为只能被1或者自身整除的数。道德经中的宇宙观为，“道生一，一生二，二生三，三生万物”。">
   
     <link rel="alternative" href="/atom.xml" title="YunShell" type="application/atom+xml">
   
@@ -169,36 +171,107 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-求取质数素数的几种方式" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/08/求取质数素数的几种方式/" class="archive-article-date">
-  	<time datetime="2018-07-08T04:07:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-08</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/08/求取质数素数的几种方式/">求取质数素数的几种方式</a>
+    <h1 class="article-title" itemprop="name">
+      求取质数素数的几种方式
     </h1>
   
 
-        <div class="article-info info-on-right">
+        <!--显示阅读次数-->
+        
+          <br/>
+          <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+          <span class="icon-sort"></span>
+          <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+                    阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+          </span>
+          </a>
           
+        
+        <a href="/2018/07/08/求取质数素数的几种方式/" class="archive-article-date">
+  	<time datetime="2018-07-08T04:07:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>质数/素数在数学上定义为只能被1或者自身整除的数。道德经中的宇宙观为，“道生一，一生二，二生三，三生万物”。<a id="more"></a> 所以任何物质都是由几个基本元素组成合成新的事物，对于数学的数字似乎也是这样，在大的数字，也是由一些基本的数字相乘而得到，而这些基本的数字，就是质数。关于质数仍旧有很多问题未能解决，感兴趣的参见 <a href="https://zh.wikipedia.org/wiki/%E7%B4%A0%E6%95%B0" target="_blank" rel="noopener">质数</a> 了解。</p>
+<p>在程序设计中，质数判断是常见的问题，这里总结一下常见的几种方式。0,1默认不是质数。</p>
+<h3 id="定义法"><a href="#定义法" class="headerlink" title="定义法"></a>定义法</h3><p>从定义本身出发，判断一个数n 是否为质数，除去1和本身，那就看它是否能被 2~n-1 中的数整除，若能整除则不是，则不能，则是。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Solution1：最基本的定义法  质数 他数整数 效率低</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">isPrimeSolution1</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (n == <span class="number">0</span> || n == <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (n % i == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>当然效率是非常低的，对于很大的数，是要计算很久，因为毕竟要逐一进行整除判断</p>
+<h3 id="定义改进1-缩小范围"><a href="#定义改进1-缩小范围" class="headerlink" title="定义改进1(缩小范围)"></a>定义改进1(缩小范围)</h3><p>那么是否判断范围从 2~n-1呢？这里其实可以在继续缩短比较范围，范围为 $[2 ,\sqrt{n}]$  即可。为什么呢？因为假设一个数是合数（也就是非质数），一定是由其他两个数相乘得到，那么其中一个必然小于它的开根号数，另一个必然大于它的开根号数，这点可以从反证法判断，如果相乘的两个数都小于开方数，那么乘积必然小于该数，假设不成立。所以改进如下。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Solution2: 定义法改进 思路： 不必判断该数 是否能整除 2~n-1。可</span></span><br><span class="line"><span class="comment"> * 小范围。2~sqrt(n)。因为若一个数是合数</span></span><br><span class="line"><span class="comment"> * （也就是由其他两个数乘积得到），那么其中一个必然小于它的开方数，另一个必然大于（反证法证明，</span></span><br><span class="line"><span class="comment"> * 如果两个都小于开方数，那么乘积就会小于该数，不符合）</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">isPrimeSolution2</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (n == <span class="number">0</span> || n == <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= Math.sqrt(n); i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (n % i == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="定义改进2-再排除偶数）"><a href="#定义改进2-再排除偶数）" class="headerlink" title="定义改进2(再排除偶数）"></a>定义改进2(再排除偶数）</h3><p>上面是从判断整除范围角度缩小，那其实从定义出发，能在删除一半的数-偶数，如果是偶数，肯定不是质数，因为偶数一定能被2整除，所以概述肯定不是质数，这就又删除一半的，只考虑奇数。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">isPrimeSolution3</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (n == <span class="number">0</span> || n == <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (n &gt; <span class="number">2</span> &amp;&amp; n % <span class="number">2</span> == <span class="number">0</span>) &#123;<span class="comment">// 排除偶数</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> sqrtValue = (<span class="keyword">int</span>) Math.sqrt(n);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">3</span>; i &lt;= sqrtValue; i += <span class="number">2</span>) &#123;<span class="comment">//奇数</span></span><br><span class="line">        <span class="keyword">if</span> (n % i == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="筛选法"><a href="#筛选法" class="headerlink" title="筛选法"></a>筛选法</h3><p>通常可以利用筛选法，求出某个范围内的所有质数。它的原理依然利用质数的性质，不能是任何质数的倍数，逐一排除。其实看到偶数，其实就不是质数，因为2是质数，偶数一定能被2整除，所以偶数一定不是质数。它的思路为，假设求取20以内的质数。</p>
+<ol>
+<li>先开辟一个容量为20的boolean 类型数组<code>primeArray[20]</code>，并全部初始化为 true。索引为该值，值为true,则表示该值为质数，false则不是，例如<code>primeArray[0]=false</code>. 则表示0不是质数</li>
+<li>初始化0,1为非质数。从质数开始，删除该质数的所有的倍数<ol>
+<li>从2开始，逐一删除掉 它的倍数(2倍，3倍，4倍…) ，直到超过选定的数据范围</li>
+<li>在从3开始，逐一删除掉它的倍数，重复以上</li>
+<li>直到所有超过数据范围</li>
+</ol>
+</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/***</span></span><br><span class="line"><span class="comment"> * Solution3: 筛选法：</span></span><br><span class="line"><span class="comment"> * 思路：假定求取 20 以内的素数。那么先初始化一个30boolean 类型数组，都初始化为true,</span></span><br><span class="line"><span class="comment"> * 数组索引都对应该数字，里面的值表示是否是质数。如 primeArray[0]=false, 表示 0不是质数。</span></span><br><span class="line"><span class="comment"> * 筛的原理为，逐一去掉倍数的值，也就是能整除的值。</span></span><br><span class="line"><span class="comment"> * 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20</span></span><br><span class="line"><span class="comment"> * 0,1 索引处，初始化为 false. 从2开始</span></span><br><span class="line"><span class="comment"> * 那么2的2倍，3倍，4倍..直到数值超出。筛选一次后，2,3,5,7,11,13,15,17,19</span></span><br><span class="line"><span class="comment"> * 那么在接着3开始，3也是质数。3的2倍，3倍。。直到超过。筛选后，2,3,5,7,11,13,17,19</span></span><br><span class="line"><span class="comment"> * 接着从索引为4，4不是质数，跳过，依次类推。</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> * 这样可以存储指定大小的质数数组，查找就直接获取值</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span>[] primeArray = <span class="keyword">new</span> <span class="keyword">boolean</span>[<span class="number">100</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">initPrimeArray</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    Arrays.fill(primeArray, <span class="keyword">true</span>);</span><br><span class="line">    primeArray[<span class="number">0</span>] = primeArray[<span class="number">1</span>] = <span class="keyword">false</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (primeArray[i]) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">2</span>; i * j &lt; primeArray.length; j++) &#123;</span><br><span class="line">                primeArray[i * j] = <span class="keyword">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">isPrimeSolution3</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> primeArray[n];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>完整的Java 测试工程见 <a href="https://github.com/cloudy-liu/BDSA/tree/master/Algorithm/%E7%B4%A0%E6%95%B0" target="_blank" rel="noopener">github</a></p>
+
+      
+
+      
+    
+      <div class="declare">
+      <strong>本文作者：</strong>
+      YunShell
+      <br>
+      <strong>本文链接：</strong>
+      https://www.liuyun.fun/2018/07/08/求取质数素数的几种方式/
+      <br>
+      <strong>版权声明：</strong>本作品采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。转载请注明出处！
+      <!-- <br>
+      <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0"/></a> -->
+      </div>
+    
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/thanks.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -210,57 +283,138 @@ var _hmt = _hmt || [];
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://www.liuyun.fun/2018/07/08/求取质数素数的几种方式/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/01/leetcode20/" class="archive-article-date">
-  	<time datetime="2018-07-01T05:21:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-01</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/01/leetcode20/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">leetcode20-括号匹配</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/01/leetcode20/">leetcode20-括号匹配</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">leetcode</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#定义法"><span class="toc-number">1.</span> <span class="toc-text">定义法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#定义改进1-缩小范围"><span class="toc-number">2.</span> <span class="toc-text">定义改进1(缩小范围)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#定义改进2-再排除偶数）"><span class="toc-number">3.</span> <span class="toc-text">定义改进2(再排除偶数）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#筛选法"><span class="toc-number">4.</span> <span class="toc-text">筛选法</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+  
+    <!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zNzM4Ny8xMzkyMQ==">
+	<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+	</script>
+<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
+    
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -288,8 +442,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
