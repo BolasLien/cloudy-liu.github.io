@@ -347,6 +347,15 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
+    <a href="/2018/07/14/Hexo更换为GitTalk评论系统/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Hexo更换为GitTalk评论系统
+        
+      </div>
+    </a>
+  
   
     <a href="/2018/07/01/leetcode20/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">leetcode20-括号匹配</div>
@@ -387,25 +396,6 @@ var _hmt = _hmt || [];
 
 
   
-    <!-- 来必力City版安装代码 -->
-<div id="lv-container" data-id="city" data-uid="MTAyMC8zNzM4Ny8xMzkyMQ==">
-	<script type="text/javascript">
-   (function(d, s) {
-       var j, e = d.getElementsByTagName(s)[0];
-
-       if (typeof LivereTower === 'function') { return; }
-
-       j = d.createElement(s);
-       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-       j.async = true;
-
-       e.parentNode.insertBefore(j, e);
-   })(document, 'script');
-	</script>
-<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
-</div>
-<!-- City版安装代码已完成 -->
-    
   
   
   
@@ -414,6 +404,22 @@ var _hmt = _hmt || [];
 
   
 
+  
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "https://www.liuyun.fun/2018/07/08/求取质数素数的几种方式/",
+  owner: 'cloudy-liu',
+  repo: 'https://github.com/cloudy-liu/cloudy-liu.github.io',
+  oauth: {
+    client_id: '50b0b92a5cd7533c3f4f',
+    client_secret: '2723bec569d9c21860c9f8304a0c5c2426f7d596',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
   
 
 
