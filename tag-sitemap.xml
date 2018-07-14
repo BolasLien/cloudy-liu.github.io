@@ -101,7 +101,21 @@
 
     <url>
         <loc>https://www.liuyun.fun/tags/Hexo%EF%BC%8Cyilia/</loc>
-        <lastmod>2018-07-14T17:24:12.955Z</lastmod>
+        <lastmod>2018-07-14T17:25:21.057Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.liuyun.fun/tags/gitment/</loc>
+        <lastmod>2018-07-14T17:25:21.057Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.liuyun.fun/tags/gitalk/</loc>
+        <lastmod>2018-07-14T17:25:21.057Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
