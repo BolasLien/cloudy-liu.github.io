@@ -6,19 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://www.liuyun.fun">
-  <title>Hexo更换为GitTalk评论系统 | YunShell</title>
+  <title>Hexo使用gitments评论系统 | YunShell</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="来必力总是显示异常，现在抽时间找些资料，将博客评论系统更换为 GitTalk 。">
+  <meta name="description" content="来必力总是显示异常，现在抽时间找些资料，将博客评论系统更换为 Gitments 。">
 <meta name="keywords" content="Hexo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo更换为GitTalk评论系统">
+<meta property="og:title" content="Hexo使用gitments评论系统">
 <meta property="og:url" content="https://www.liuyun.fun/2018/07/14/Hexo更换为GitTalk评论系统/index.html">
 <meta property="og:site_name" content="YunShell">
-<meta property="og:description" content="来必力总是显示异常，现在抽时间找些资料，将博客评论系统更换为 GitTalk 。">
-<meta property="og:updated_time" content="2018-07-14T14:38:04.611Z">
+<meta property="og:description" content="来必力总是显示异常，现在抽时间找些资料，将博客评论系统更换为 Gitments 。">
+<meta property="og:image" content="http://p5sfmckwy.bkt.clouddn.com/img/OAuthRegister1.png">
+<meta property="og:image" content="http://p5sfmckwy.bkt.clouddn.com/img/clientID.png">
+<meta property="og:image" content="http://p5sfmckwy.bkt.clouddn.com/img/config.png">
+<meta property="og:image" content="http://p5sfmckwy.bkt.clouddn.com/img/validfail.png">
+<meta property="og:updated_time" content="2018-07-14T16:09:40.288Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo更换为GitTalk评论系统">
-<meta name="twitter:description" content="来必力总是显示异常，现在抽时间找些资料，将博客评论系统更换为 GitTalk 。">
+<meta name="twitter:title" content="Hexo使用gitments评论系统">
+<meta name="twitter:description" content="来必力总是显示异常，现在抽时间找些资料，将博客评论系统更换为 Gitments 。">
+<meta name="twitter:image" content="http://p5sfmckwy.bkt.clouddn.com/img/OAuthRegister1.png">
   
     <link rel="alternative" href="/atom.xml" title="YunShell" type="application/atom+xml">
   
@@ -178,7 +183,7 @@ var _hmt = _hmt || [];
         
   
     <h1 class="article-title" itemprop="name">
-      Hexo更换为GitTalk评论系统
+      Hexo使用gitments评论系统
     </h1>
   
 
@@ -201,8 +206,30 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>来必力总是显示异常，现在抽时间找些资料，将博客评论系统更换为 <code>GitTalk</code> 。<a id="more"></a> 。</p>
-<p><a href="https://github.com/gitalk/gitalk" target="_blank" rel="noopener">GitTalk</a> 和 <a href="https://github.com/imsun/gitment" target="_blank" rel="noopener">Gitment</a> 原理类似，都是通过 </p>
+        <p>来必力总是显示异常，现在抽时间找些资料，将博客评论系统更换为 <code>Gitments</code> 。<a id="more"></a> 。</p>
+<p> <a href="https://github.com/imsun/gitment" target="_blank" rel="noopener">Gitment</a> 的原理是利用 github 上的 issue 系统，也就是你提的评论都会对应生成 issue。当然账户只能是通过 github 账号。这点跟来必力有点差，不过博客的受众大部分都是程序员，所以也可以接受。</p>
+<h3 id="Hexo-yilia-gitments-配置"><a href="#Hexo-yilia-gitments-配置" class="headerlink" title="Hexo-yilia  gitments 配置"></a>Hexo-yilia  gitments 配置</h3><p><code>yilia</code> 主题默认是支持 <code>gitments</code>的，所以只需要进行配置。</p>
+<h4 id="注册-OAuth-Application"><a href="#注册-OAuth-Application" class="headerlink" title="注册 OAuth Application"></a>注册 OAuth Application</h4><p>当别人评论你的文章时，会需要它是授权。点击 <a href="https://github.com/settings/applications/new" target="_blank" rel="noopener">https://github.com/settings/applications/new</a></p>
+<p>进行注册。注册界面如下。</p>
+<p>Homepage URL 填写</p>
+<p><img src="http://p5sfmckwy.bkt.clouddn.com/img/OAuthRegister1.png" alt=""></p>
+<p>注册成功后，会获取到 <code>Client ID/scerct</code> 。如下图所示，接下来就是将信息填入配置文件中。</p>
+<p><img src="http://p5sfmckwy.bkt.clouddn.com/img/clientID.png" alt=""></p>
+<h4 id="配置-config-yml-文件"><a href="#配置-config-yml-文件" class="headerlink" title="配置 _config.yml 文件"></a>配置 <code>_config.yml</code> 文件</h4><p>打开<code>themes\yilia\_config.yml</code> ,在如下位置填入正确的信息即可。</p>
+<p><img src="http://p5sfmckwy.bkt.clouddn.com/img/config.png" alt=""></p>
+<ul>
+<li><code>gitment_owner</code>: 填写你的 github 账户名即可</li>
+<li><code>gitment_repo</code>: repo 名字为可新建一个repo 或者使用博客托管的 repo 都行。</li>
+<li><code>client_id</code>和<code>client_secret</code> : 就是上步骤中注册的获取的信息。</li>
+</ul>
+<h4 id="重新部署"><a href="#重新部署" class="headerlink" title="重新部署"></a>重新部署</h4><p>配置完毕后，重新部署，即可看到效果。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
+<h4 id="解决Valid-Fail"><a href="#解决Valid-Fail" class="headerlink" title="解决Valid Fail"></a>解决Valid Fail</h4><p>部署后，每次文章的评论都会需要初始化，但是试验是发现初始化失败，查找资料后，发现是 github issue 本身的规则限制（label 的长度最长为50），可参考<a href="https://www.jianshu.com/p/57afa4844aaa" target="_blank" rel="noopener">Gitment评论功能接入踩坑教程</a> 。</p>
+<p><img src="http://p5sfmckwy.bkt.clouddn.com/img/validfail.png" alt=""></p>
+<p>解决方法，将 github issue 的 id 改为按照日期方式。</p>
+<p>文件位置：<code>themes\yilia\layout\_partial\post\gitment.ejs</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ar gitment = new Gitment(&#123;</span><br><span class="line">  // id: &quot;&lt;%=url%&gt;&quot;,</span><br><span class="line">  id: &apos;&lt;%= page.date %&gt;&apos;,</span><br><span class="line">  owner: &apos;&lt;%=theme.gitment_owner%&gt;&apos;,</span><br></pre></td></tr></table></figure>
+<p>重新部署即可。</p>
 
       
 
@@ -357,7 +384,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Hexo-yilia-gitments-配置"><span class="toc-number">1.</span> <span class="toc-text">Hexo-yilia  gitments 配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#注册-OAuth-Application"><span class="toc-number">1.1.</span> <span class="toc-text">注册 OAuth Application</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#配置-config-yml-文件"><span class="toc-number">1.2.</span> <span class="toc-text">配置 _config.yml 文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#重新部署"><span class="toc-number">1.3.</span> <span class="toc-text">重新部署</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#解决Valid-Fail"><span class="toc-number">1.4.</span> <span class="toc-text">解决Valid Fail</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -391,7 +418,8 @@ var gitment = new Gitment({
     client_secret: '2723bec569d9c21860c9f8304a0c5c2426f7d596',
   },
 })
-gitment.render('gitment-ctn')
+// gitment.render('gitment-ctn')
+gitment.render('comments')
 </script>
   
 
