@@ -86,6 +86,13 @@
     </url>
 
     <url>
+        <loc>https://www.liuyun.fun/tags/Hexo/</loc>
+        <lastmod>2018-07-14T14:47:36.097Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://www.liuyun.fun/tags/yilia/</loc>
         <lastmod>2018-07-14T14:47:36.097Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -93,8 +100,8 @@
     </url>
 
     <url>
-        <loc>https://www.liuyun.fun/tags/Hexo/</loc>
-        <lastmod>2018-07-14T16:32:24.965Z</lastmod>
+        <loc>https://www.liuyun.fun/tags/Hexo%EF%BC%8Cyilia/</loc>
+        <lastmod>2018-07-14T17:24:12.955Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
