@@ -101,13 +101,20 @@ npm run dist
 
 ###  单篇文章点击量
 
-在需要显示的地方添加
+ * `themes\yilia\layout\_partial\article.ejs`中 在 `<%- partial('post/title', {class_name: 'article-title'}) %>` 插入如下代码
 
 ```
-# 使用 pv 记录方式，每访问一次，记录一次
-<span id="busuanzi_container_page_pv">  本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span>
+<!--显示阅读次数-->
+<% if (!index && post.comments){ %>
+  <br/>
+  <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+  <span class="icon-sort"></span>
+  <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+            阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+  </span>
+  </a>
+  <% } %>
 ```
-
 ## 添加来必力评论系统
 
 [点击这个链接]( http://www.zhoujy.me/2017/07/16/livere/) 查看

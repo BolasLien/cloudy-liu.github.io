@@ -85,7 +85,7 @@ duoshuo: false
 livere: false
 
 #2、网易云跟帖
-wangyiyun: true
+wangyiyun: false
 
 #3、畅言
 changyan_appid: false
@@ -95,11 +95,22 @@ changyan_conf: false
 disqus: false
 
 #5、Gitment
-gitment_owner: false      #你的 GitHub ID
-gitment_repo: ''          #存储评论的 repo
+# gitment_owner: 'cloudy-liu' #你的 GitHub ID
+gitment_owner: false #你的 GitHub ID
+gitment_repo: 'cloudy-liu.github.io' #存储评论的 repo
 gitment_oauth:
-  client_id: ''           #client ID
-  client_secret: ''       #client secret
+  client_id: '50b0b92a5cd7533c3f4f'  #client ID
+  client_secret: '2723bec569d9c21860c9f8304a0c5c2426f7d596'  #client secret
+
+#6、gitalk评论
+gitalk:
+  enable:  true
+  githubID:  cloudy-liu   
+  repo:  'cloudy-liu.github.io'
+  ClientID:  '50b0b92a5cd7533c3f4f'
+  ClientSecret:  '2723bec569d9c21860c9f8304a0c5c2426f7d596'
+  adminUser:  cloudy-liu
+  distractionFreeMode: true
 
 # 样式定制 - 一般不需要修改，除非有很强的定制欲望…
 style:
