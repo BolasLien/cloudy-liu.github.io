@@ -7,8 +7,8 @@
     </url>
 
     <url>
-        <loc>https://www.liuyun.fun/2018/07/14/Hexo%E6%9B%B4%E6%8D%A2%E4%B8%BAGitTalk%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/</loc>
-        <lastmod>2018-07-14T17:30:45.025Z</lastmod>
+        <loc>https://www.liuyun.fun/2018/06/14/%E4%B8%83%E5%A4%A7%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93(Java%E5%AE%9E%E7%8E%B0%E7%89%88)/</loc>
+        <lastmod>2018-07-15T12:40:04.598Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -16,7 +16,15 @@
 
     <url>
         <loc>https://www.liuyun.fun/2018/04/07/Hexo_yilia_%E4%B8%BB%E9%A2%98%E4%B8%80%E6%8F%BD%E5%AD%90%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/</loc>
-        <lastmod>2018-07-14T14:47:36.097Z</lastmod>
+        <lastmod>2018-07-15T07:33:58.084Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://www.liuyun.fun/2018/07/14/Hexo%E6%9B%B4%E6%8D%A2%E4%B8%BAGitTalk%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/</loc>
+        <lastmod>2018-07-14T17:30:45.025Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -33,14 +41,6 @@
     <url>
         <loc>https://www.liuyun.fun/2018/07/01/leetcode20/</loc>
         <lastmod>2018-07-01T15:50:21.080Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://www.liuyun.fun/2018/06/14/%E4%B8%83%E5%A4%A7%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93(Java%E5%AE%9E%E7%8E%B0%E7%89%88)/</loc>
-        <lastmod>2018-06-27T00:17:34.970Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
