@@ -15,7 +15,7 @@
 <meta property="og:url" content="https://www.liuyun.fun/2018/06/14/七大排序算法总结(Java实现版)/index.html">
 <meta property="og:site_name" content="YunShell">
 <meta property="og:description" content="这节开始总结7种最常用的排序算法，先来看看最简单的冒泡算法。">
-<meta property="og:updated_time" content="2018-07-15T12:40:04.598Z">
+<meta property="og:updated_time" content="2018-07-15T12:44:09.568Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="七大排序算法总结(Java实现版)">
 <meta name="twitter:description" content="这节开始总结7种最常用的排序算法，先来看看最简单的冒泡算法。">
@@ -288,19 +288,19 @@ var _hmt = _hmt || [];
 <p><strong>建堆的时间复杂度</strong></p>
 <p>假设数组的长度为 n。那么堆的高度为 $h=logn$ 。堆的建立耗时步骤主要是从最后一个非叶子节点往回逐一和子节点进行比较和交换。上图堆的高度为4 = [log10] 。</p>
 <p>最后一层的的叶子节点，如7,8,9不需要比较和交换。倒数第二层(h-1)层的每个节点需要下沉比较高度为1（每个节点和子节点比较交换都算作常数），而h-1 层一共有 $2^{h-1}$ 个节点。 倒数第三层下沉比较的高度为 2，该层节点为 $2^{h-2}$ 。根节点需要下沉比较为h 次。所以总的时间为</p>
-<p>$ S= 1<em>2^{h-1} + 2</em>2^{h-2} + 3<em>2^{h-3} + … + h</em>2^{0} \tag{1}$   </p>
+<p>$S= 1<em>2^{h-1} + 2</em>2^{h-2} + 3<em>2^{h-3} + … + h</em>2^{0} \tag{1}$   </p>
 <p>可以看出，S 可化作一个等比数列求和</p>
-<p>$ \dfrac{1}{2}S= 2<em>2^{h-2} + 2</em>2^{h-3} + … + \dfrac{1}{2}h*2^{0} \tag{2}$   </p>
+<p>$\dfrac{1}{2}S= 2<em>2^{h-2} + 2</em>2^{h-3} + … + \dfrac{1}{2}h*2^{0} \tag{2}$   </p>
 <p>(1) - (2)  可得</p>
 <p>$ \dfrac{1}{2}S= 2^{h-1}+2^{h-2} + 2^{h-3} + … 1 - \dfrac{1}{2}h \tag{3}$ </p>
 <p>中间是个对比数列，求和得</p>
 <p>$\dfrac{1}{2}S=\dfrac{1-2^{h}}{1-2}-\dfrac{1}{2}h =2^{h} -1 - \dfrac{1}{2}h\tag{4}$</p>
 <p>两边乘以2得：</p>
 <p>$S=2*2^{h} -2 -h\tag{5}$</p>
-<p>又 $h = log<em>{2}n$ ，所以 $ S = 2*n - 2 -log</em>{2}n$ ，所以建堆的时间复杂度为 $O(n)$ 。</p>
+<p>又 $h=log<em>{2}n$ ，所以 $S = 2*n - 2 -log</em>{2}n$ ，所以建堆的时间复杂度为 $O(n)$ 。</p>
 <p><strong>调整堆时间复杂度</strong></p>
 <p>每次将0号元素交换到后面，每次调整堆都是从根节点调整，所以高度为 $log_{2}n$ ，调整的次数为 n-1次，直到最后一个元素。所以时间复杂度为 $nlogn$ 。</p>
-<p>综上，所以堆排序的总时间为 $n+nlogn=O(nlogn)$</p>
+<p>综上，所以堆排序的总时间为 $n+nlogn=O(nlogn)​$</p>
 <p>最好，最坏的时间复杂度都一样，因为都必须要这样一个过程。</p>
 <p><strong>空间复杂度</strong></p>
 <p>使用的常数个变量，所以空间复杂度为 O(1)</p>
