@@ -15,7 +15,7 @@
 <meta property="og:url" content="https://www.liuyun.fun/2018/06/14/七大排序算法总结(Java实现版)/index.html">
 <meta property="og:site_name" content="YunShell">
 <meta property="og:description" content="这节开始总结7种最常用的排序算法，先来看看最简单的冒泡算法。">
-<meta property="og:updated_time" content="2018-07-15T14:49:36.629Z">
+<meta property="og:updated_time" content="2018-07-15T14:53:23.301Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="七大排序算法总结(Java实现版)">
 <meta name="twitter:description" content="这节开始总结7种最常用的排序算法，先来看看最简单的冒泡算法。">
@@ -289,6 +289,7 @@ var _hmt = _hmt || [];
 <p>假设数组的长度为 n。那么堆的高度为 $h=logn$ 。堆的建立耗时步骤主要是从最后一个非叶子节点往回逐一和子节点进行比较和交换。上图堆的高度为4 = [log 10] 。</p>
 <p>最后一层的的叶子节点，如7,8,9不需要比较和交换。倒数第二层(h-1)层的每个节点需要下沉比较高度为1（每个节点和子节点比较交换都算作常数），而h-1 层一共有 $2^{h-1}$ 个节点。 倒数第三层下沉比较的高度为 2，该层节点为 $2^{h-2}$ 。根节点需要下沉比较为h 次。所以总的时间为</p>
 <p>可以看出，S 可化作一个等比数列求和</p>
+<p>$S= =2^{h} -1 - \dfrac{1}{2}h\tag{1}$</p>
 <p>(1) - (2)  可得</p>
 <p>$ \dfrac{1}{2}S= 2^{h-1}+2^{h-2} + 2^{h-3} + … 1 - \dfrac{1}{2}h \tag{3}$</p>
 <p>$\dfrac{1}{2}S = 2<em>2^{h-2} + 2</em>2^{h-3} + … + \dfrac{1}{2}h*2^{0} \tag{2}$ </p>
