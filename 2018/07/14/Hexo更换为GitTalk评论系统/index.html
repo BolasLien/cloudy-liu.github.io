@@ -15,16 +15,16 @@
 <meta property="og:url" content="https://www.liuyun.fun/2018/07/14/Hexo更换为GitTalk评论系统/index.html">
 <meta property="og:site_name" content="YunShell">
 <meta property="og:description" content="来必力总是显示异常，现在抽时间找些资料，将博客评论系统更换为 gitment/gitalk。">
-<meta property="og:image" content="http://p5sfmckwy.bkt.clouddn.com/img/OAuthRegister1.png">
-<meta property="og:image" content="http://p5sfmckwy.bkt.clouddn.com/img/clientID.png">
-<meta property="og:image" content="http://p5sfmckwy.bkt.clouddn.com/img/config.png">
-<meta property="og:image" content="http://p5sfmckwy.bkt.clouddn.com/img/validfail.png">
-<meta property="og:image" content="http://p5sfmckwy.bkt.clouddn.com/img/gitalk_test.png">
-<meta property="og:updated_time" content="2018-07-14T17:30:45.025Z">
+<meta property="og:image" content="https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/OAuthRegister1.png">
+<meta property="og:image" content="https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/clientID.png">
+<meta property="og:image" content="https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/config.png">
+<meta property="og:image" content="https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/validfail.png">
+<meta property="og:image" content="https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/gitalk_test.png">
+<meta property="og:updated_time" content="2019-05-22T00:59:43.173Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo-yilia使用gitment&#x2F;gitalk评论系统">
 <meta name="twitter:description" content="来必力总是显示异常，现在抽时间找些资料，将博客评论系统更换为 gitment/gitalk。">
-<meta name="twitter:image" content="http://p5sfmckwy.bkt.clouddn.com/img/OAuthRegister1.png">
+<meta name="twitter:image" content="https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/OAuthRegister1.png">
   
     <link rel="alternative" href="/atom.xml" title="YunShell" type="application/atom+xml">
   
@@ -212,11 +212,11 @@ var _hmt = _hmt || [];
 <h2 id="Hexo-yilia-gitment-配置"><a href="#Hexo-yilia-gitment-配置" class="headerlink" title="Hexo-yilia  gitment 配置"></a>Hexo-yilia  gitment 配置</h2><p><code>yilia</code> 主题默认是支持 <code>gitments</code>的，所以只需要进行配置。</p>
 <h3 id="注册-OAuth-Application"><a href="#注册-OAuth-Application" class="headerlink" title="注册 OAuth Application"></a>注册 OAuth Application</h3><p>当别人评论你的文章时，会需要它是授权。点击 <a href="https://github.com/settings/applications/new" target="_blank" rel="noopener">https://github.com/settings/applications/new</a></p>
 <p>进行注册。注册界面如下。</p>
-<p><img src="http://p5sfmckwy.bkt.clouddn.com/img/OAuthRegister1.png" alt=""></p>
+<p><img src="https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/OAuthRegister1.png" alt=""></p>
 <p>注册成功后，会获取到 <code>Client ID/scerct</code> 。如下图所示，接下来就是将信息填入配置文件中。</p>
-<p><img src="http://p5sfmckwy.bkt.clouddn.com/img/clientID.png" alt=""></p>
+<p><img src="https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/clientID.png" alt=""></p>
 <h3 id="配置-config-yml-文件"><a href="#配置-config-yml-文件" class="headerlink" title="配置 _config.yml 文件"></a>配置 <code>_config.yml</code> 文件</h3><p>打开<code>themes\yilia\_config.yml</code> ,在如下位置填入正确的信息即可。</p>
-<p><img src="http://p5sfmckwy.bkt.clouddn.com/img/config.png" alt=""></p>
+<p><img src="https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/config.png" alt=""></p>
 <ul>
 <li><code>gitment_owner</code>: 填写你的 github 账户名即可</li>
 <li><code>gitment_repo</code>: repo 名字为可新建一个repo 或者使用博客托管的 repo 都行。</li>
@@ -225,13 +225,13 @@ var _hmt = _hmt || [];
 <h3 id="重新部署"><a href="#重新部署" class="headerlink" title="重新部署"></a>重新部署</h3><p>配置完毕后，重新部署，即可看到效果。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
 <h3 id="解决Valid-Fail"><a href="#解决Valid-Fail" class="headerlink" title="解决Valid Fail"></a>解决Valid Fail</h3><p>部署后，每次文章的评论都会需要初始化，但是试验是发现初始化失败，查找资料后，发现是 github issue 本身的规则限制（label 的长度最长为50），可参考<a href="https://www.jianshu.com/p/57afa4844aaa" target="_blank" rel="noopener">Gitment评论功能接入踩坑教程</a> 。</p>
-<p><img src="http://p5sfmckwy.bkt.clouddn.com/img/validfail.png" alt=""></p>
+<p><img src="https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/validfail.png" alt=""></p>
 <p>解决方法，将 github issue 的 id 改为按照日期方式。</p>
 <p>文件位置：<code>themes\yilia\layout\_partial\post\gitment.ejs</code></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ar gitment = new Gitment(&#123;</span><br><span class="line">  // id: &quot;&lt;%=url%&gt;&quot;,</span><br><span class="line">  id: &apos;&lt;%= page.date %&gt;&apos;,</span><br><span class="line">  owner: &apos;&lt;%=theme.gitment_owner%&gt;&apos;,</span><br></pre></td></tr></table></figure>
 <p>重新部署即可。</p>
 <h2 id="Hexo-yilia-gitalk-配置"><a href="#Hexo-yilia-gitalk-配置" class="headerlink" title="Hexo-yilia gitalk 配置"></a>Hexo-yilia gitalk 配置</h2><p><a href="https://github.com/gitalk/gitalk/" target="_blank" rel="noopener">gitalk</a> 风格感觉更加好看，维护的也比较勤。具体的配置方法，请参考 <a href="https://ziven.cc/2018/07/03/Hexo%E4%B8%BB%E9%A2%98yilia%E5%A2%9E%E5%8A%A0gitalk%E8%AF%84%E8%AE%BA%E6%8F%92%E4%BB%B6/" target="_blank" rel="noopener">Hexo主题yilia增加gitalk评论插件 </a> 。然后重新部署<code>hexo d -g</code> 生成之后的样式如下。</p>
-<p><img src="http://p5sfmckwy.bkt.clouddn.com/img/gitalk_test.png" alt=""></p>
+<p><img src="https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/gitalk_test.png" alt=""></p>
 <p>(完）</p>
 
       
@@ -370,6 +370,15 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
+    <a href="/2018/07/15/五大查找算法总结(Java实现版)/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          五大查找算法总结(Java实现版)
+        
+      </div>
+    </a>
+  
   
     <a href="/2018/07/08/求取质数素数的几种方式/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">求取质数素数的几种方式</div>
@@ -449,7 +458,7 @@ gitalk.render('gitalk-container')
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018 YunShell
+    		&copy; 2019 YunShell
     	</div>
       	<div class="footer-right">
 					<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a>
@@ -565,19 +574,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">yilia</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">独立域名</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">ML</a>
+                <a href="javascript:void(0)" class="js-tag color3">gitment</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Tensorflow</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">yilia</a>
+                <a href="javascript:void(0)" class="js-tag color2">gitalk</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -593,7 +602,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">排序</a>
+                <a href="javascript:void(0)" class="js-tag color4">leetcode</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">ML</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Tensorflow</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -601,23 +618,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">查找</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">排序</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">北大经济学</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">leetcode</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Hexo，yilia</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">gitment</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">gitalk</a>
               </li>
             
             <div class="clearfix"></div>

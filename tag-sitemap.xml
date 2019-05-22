@@ -2,57 +2,8 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>https://www.liuyun.fun/tags/%E5%8C%97%E5%A4%A7%E7%BB%8F%E6%B5%8E%E5%AD%A6/</loc>
-        <lastmod>2018-04-06T11:41:44.565Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.liuyun.fun/tags/%E7%8B%AC%E7%AB%8B%E5%9F%9F%E5%90%8D/</loc>
-        <lastmod>2018-04-06T11:46:41.133Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.liuyun.fun/tags/github/</loc>
-        <lastmod>2018-04-06T14:54:58.660Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.liuyun.fun/tags/%E5%8D%9A%E5%AE%A2/</loc>
-        <lastmod>2018-04-06T14:54:58.660Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://www.liuyun.fun/tags/HashMap/</loc>
         <lastmod>2018-05-31T16:31:57.776Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.liuyun.fun/tags/ML/</loc>
-        <lastmod>2018-05-31T16:35:48.957Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.liuyun.fun/tags/Tensorflow/</loc>
-        <lastmod>2018-05-31T16:35:48.957Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.liuyun.fun/tags/Test/</loc>
-        <lastmod>2018-06-16T07:11:09.549Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -65,50 +16,106 @@
     </url>
 
     <url>
-        <loc>https://www.liuyun.fun/tags/gitment/</loc>
-        <lastmod>2018-07-14T17:30:45.025Z</lastmod>
+        <loc>https://www.liuyun.fun/tags/%E6%9F%A5%E6%89%BE/</loc>
+        <lastmod>2018-07-15T16:08:19.435Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://www.liuyun.fun/tags/gitalk/</loc>
-        <lastmod>2018-07-14T17:30:45.025Z</lastmod>
+        <loc>https://www.liuyun.fun/tags/github/</loc>
+        <lastmod>2019-05-22T00:59:41.686Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://www.liuyun.fun/tags/Hexo/</loc>
-        <lastmod>2018-07-15T07:33:58.084Z</lastmod>
+        <loc>https://www.liuyun.fun/tags/%E5%8D%9A%E5%AE%A2/</loc>
+        <lastmod>2019-05-22T00:59:41.686Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.liuyun.fun/tags/%E7%8B%AC%E7%AB%8B%E5%9F%9F%E5%90%8D/</loc>
+        <lastmod>2019-05-22T00:59:41.686Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://www.liuyun.fun/tags/yilia/</loc>
-        <lastmod>2018-07-15T07:33:58.084Z</lastmod>
+        <lastmod>2019-05-22T00:59:43.173Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.liuyun.fun/tags/gitment/</loc>
+        <lastmod>2019-05-22T00:59:43.173Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.liuyun.fun/tags/gitalk/</loc>
+        <lastmod>2019-05-22T00:59:43.173Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.liuyun.fun/tags/Hexo/</loc>
+        <lastmod>2019-05-22T00:59:45.581Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.liuyun.fun/tags/Test/</loc>
+        <lastmod>2019-05-22T00:59:45.581Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.liuyun.fun/tags/ML/</loc>
+        <lastmod>2019-05-22T00:59:45.955Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.liuyun.fun/tags/Tensorflow/</loc>
+        <lastmod>2019-05-22T00:59:45.955Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://www.liuyun.fun/tags/Java/</loc>
-        <lastmod>2018-07-15T15:22:18.018Z</lastmod>
+        <lastmod>2019-05-22T00:59:48.493Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://www.liuyun.fun/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/</loc>
-        <lastmod>2018-07-15T15:22:18.018Z</lastmod>
+        <lastmod>2019-05-22T00:59:48.493Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://www.liuyun.fun/tags/%E6%8E%92%E5%BA%8F/</loc>
-        <lastmod>2018-07-15T15:22:18.018Z</lastmod>
+        <lastmod>2019-05-22T00:59:48.493Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.liuyun.fun/tags/%E5%8C%97%E5%A4%A7%E7%BB%8F%E6%B5%8E%E5%AD%A6/</loc>
+        <lastmod>2019-05-22T00:59:49.388Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
