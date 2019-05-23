@@ -19,7 +19,7 @@ tags: [Hexo,github,博客]
 如果你在 Windows 上经常使用控制台的话，你一定会对 Windows 自带的 `cmd.exe` 深恶痛绝，漆黑的背景，看久了眼睛难受，无法窗口多开，多任务处理难受。`cmder` 就是 windows 控制台终端的福音，有了它，你就可以享受漂亮可自定义的 UI 界面，免安装，下载解压即用，使用完整版，还整合了 *Git* ，*linux*  下大部分命令也可以直接使用，比如 `ls`  `grep`之类的，一个 `Cmder` 全搞定，于是我就把 `Git Bash` 给卸载了。
 
 [官网](http://cmder.net/) 下载**完整版**，然后解压，找到 `cmder.exe` 双击即可启动，以后我们就用它作为默认的终端，若 `GitHub release` 下载很慢，可以先去下载  [freedownloadmanager](https://www.freedownloadmanager.org/) ，这个下载 `GitHub release` 软件超快的。以后我们的命令都是在 `cmder.exe `中下的。
-![](http://p5sfmckwy.bkt.clouddn.com/img/cmder.png)
+![](https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/cmder.png)
 
 ## 创建 GitHub Pages
 ### 注册 GitHub 账号
@@ -42,7 +42,7 @@ $ git config --global user.email cloudy-liuu@gmail.com
 ssh-keygen -t rsa -C "cloudy-liuu@gmail.com"
 ```
 
-![](http://p5sfmckwy.bkt.clouddn.com/img/coding_ssh_1_2_create.png)
+![](https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/coding_ssh_1_2_create.png)
 
 * 进入到*GitHub*  网站中， `Settings` 左边栏`SSH and GPG keys` `New SSh Key ` ，将刚才产生的公钥内容(`C:\Users\Administrator\.ssh\id_rsa.pub`) 粘贴进去即可。
 * `cmder` 中测试。输入以下命令，遇到确认信息，输入 `yes` ，成功如下所
@@ -61,21 +61,21 @@ Hi cloudy-liu! You've successfully authenticated, but GitHub does not provide sh
 * 登入`GitHub` 账号
 * 新建一个仓库。命名为`username.github.io` ，参看以下我的创建，勾选一下初始化 `README` 文件
 
-![](http://p5sfmckwy.bkt.clouddn.com/img/cloudy_github_io.png)
+![](https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/cloudy_github_io.png)
 
 * 创建成功后，该 `Pages` 就可以使用了，可以在 `Settings`  `GitHub Pages` 中看到 Publish 了
 
-![](http://p5sfmckwy.bkt.clouddn.com/img/cloudy_io_publish.png)
+![](https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/cloudy_io_publish.png)
 
 * 此时任何人都可以通过浏览器打开访问上述网址了，查看内容了，当然目前这里只有一个 `README `文件
 
-![](http://p5sfmckwy.bkt.clouddn.com/img/visit_github_io.png)
+![](https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/visit_github_io.png)
 
 ##  Hexo 搭建并部署博客 
 ### 下载 Node.js
 *Hexo* 是使用`Node.js`开发的，所以为了安装它，我们需要先安装 `Node.js `工具。去[官网]( https://nodejs.org/en/download/) 下载安装最新版本的，安装就一路 next 即可，最后它会被加入到系统环境 path 中。
 
-![](http://p5sfmckwy.bkt.clouddn.com/img/nodejs_install_1.png)
+![](https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/nodejs_install_1.png)
 
  输入以下命令，查看是否安装成功
 
@@ -121,12 +121,12 @@ INFO  Start blogging with Hexo!
 
 * **查看文件目录结构**。初始化后，它的文件结构如下。其中 *source/_posts* 文件件，这个就是博客的内容，我们以后可以在这个目录新建 `.md` 文件，就可以了。初始状态下有个默认的`hello-world.md` 文件。
 
-![](http://p5sfmckwy.bkt.clouddn.com/img/init_file_hexo.png)
+![](https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/init_file_hexo.png)
 
 * **本地部署**。 通过 `hexo g` `hexo s`  就可以查看了，然后在浏览器中输入 *http://localhost:4000/*  就可以查看刚才本地部署的博客，至此本地博客系统已经成功架起来了，按下`ctrl+c` 终止，接下来，我们将此博客部署到 GitHub Pages 上去。
 
-![](http://p5sfmckwy.bkt.clouddn.com/img/bushu.png)
-![](http://p5sfmckwy.bkt.clouddn.com/img/rst_github_io.png)
+![](https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/bushu.png)
+![](https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/rst_github_io.png)
 
 
 **部署博客到 GitHub Pages上** 
@@ -174,12 +174,12 @@ E:\blog
 
 - 浏览器打开 `https://cloudy-liu.github.io/` ，就可以看到部署到结果。
 
-  ![](http://p5sfmckwy.bkt.clouddn.com/img/rst_github_io.png)
+  ![](https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/rst_github_io.png)
 
 至此，别人就可以通过类似 `https://cloudy-liu.github.io` 方式访问你的博客了。
 
 ## 小结
 本文详细记录了如何使用*Hexo* 结合 *GitHub Pages* 快速搭建个人博客，同时推荐了一个 Windows 超好用的终端 Cmder ，如果觉得本文对你有用，那就一个转发或者一个赞吧。同时欢迎关注微信公众号 "YunShell"。
-![](http://p5sfmckwy.bkt.clouddn.com/img/wechat_qrcode.jpg)
+![](https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/wechat_qrcode.jpg)
 
 （全文完）

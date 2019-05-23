@@ -11,7 +11,7 @@ tags: [Hexo,yilia]
 `yilia` 在首次使用时，点击`所有文章` 时，会出现模块找不到的错误，可按照提示操作即可
 注意一下，_config.yml 路径是指 根目录下的，而非 `yilia` 主题下的 config文件
 
-![](http://p5sfmckwy.bkt.clouddn.com/img/3_1_yilia_loss_module.png)
+![](https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/3_1_yilia_loss_module.png)
 
 ## 配置图片资源
 * **添加图片资源文件夹**。 路径为 `themes/yilia/source/`下，可添加一个 `assets` 文件夹，里面存放图片资源即可
@@ -38,13 +38,13 @@ tags: [Hexo,yilia]
 
 * 效果
 
-  ![](http://p5sfmckwy.bkt.clouddn.com/img/3_2_yilia_摘要.png)
+  ![](https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/3_2_yilia_摘要.png)
 
 ## 文章显示目录
 
 增加文章目录 TOC(table of content )，方便阅读文章, 在 `themes/yilia/_config.ym`中进行配置 `toc: 2`即可，它会将你 Markdown 语法的标题，生成目录，目录查看在右下角。
 
-![](http://p5sfmckwy.bkt.clouddn.com/img/3_3_yilia_目录.png)
+![](https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/3_3_yilia_目录.png)
 
 ## 增加归档菜单
 
@@ -61,11 +61,11 @@ menu:
 * **直接修改编译好的文件**。路径为： `theme\yilia\source\main.0cf68a.css`
   * 修改代码背景色，搜索 `.article-entry .highlight`, 修改background后面的颜色
 
-    ![](http://p5sfmckwy.bkt.clouddn.com/img/3_4_code_bg_color.png)
+    ![](https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/3_4_code_bg_color.png)
 
   * 修改代码字体颜色 `.article-entry .highlight .line`
   * 
-    ![](http://p5sfmckwy.bkt.clouddn.com/img/3_5_code_font_color.png)
+    ![](https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/3_5_code_font_color.png)
 * **修改源文件重新build**。上述资源对应源文件为 `yilia\source-src\css\highlight.scss`，按照如下方式build
 
 ```
@@ -127,11 +127,11 @@ npm run dist
 
 * 登入网易云音乐网页版，选择一首歌，点击歌曲详情，点击生成外链播放器
 
-  ![](http://p5sfmckwy.bkt.clouddn.com/img/3_5_wangyiyun.png)
+  ![](https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/3_5_wangyiyun.png)
 
 * 复制外链代码，插入你需要编辑的 MD 格式文章里面，即可
 
-![](http://p5sfmckwy.bkt.clouddn.com/img/3_5_wangyiyun_2.png)
+![](https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/3_5_wangyiyun_2.png)
 
 ##  百度/Google统计/SEO
 
@@ -147,11 +147,11 @@ npm run dist
 
 * 添加文件。步骤为添加 `对象存储`, 新建一个存储空间，进入到该空间，点击 `内容管理`,点击`上传文件`
 
-  ![](http://p5sfmckwy.bkt.clouddn.com/img/3_6_qiniu_1.png)
+  ![](https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/3_6_qiniu_1.png)
 
 * **生成外链插入到文章中**
 
-  ![](http://p5sfmckwy.bkt.clouddn.com/img/3_6_qiniu_2.png)
+  ![](https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/3_6_qiniu_2.png)
 
 ### 使用 [PicGo](https://github.com/Molunerfinn/PicGo) 自动生成外链
 
@@ -159,11 +159,11 @@ npm run dist
 
 * **查看你的七牛密钥**。登入七牛云查看密钥 `个人面板` -> `密钥管理`
 
-![](http://p5sfmckwy.bkt.clouddn.com/img/3_6_3_qiniu_key.png)
+![](https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/3_6_3_qiniu_key.png)
 
 * **PicGo 配置七牛账户**。然后就在上传图，拖动图片进去，即可生成外链，直接插入到文章中即可。
 
-  ![](http://p5sfmckwy.bkt.clouddn.com/img/3_6_qiniu_config.png)
+  ![](https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/3_6_qiniu_config.png)
 
 
 ##  Demo测试

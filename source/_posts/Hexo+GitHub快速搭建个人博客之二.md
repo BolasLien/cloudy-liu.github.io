@@ -18,11 +18,11 @@ tags: [Hexo,github,博客,独立域名]
 ### 阿里云购买域名
 因为我在阿里云购买了域名，所以这里以阿里云为例。当然也可以在其他地方购买，比如腾讯云。进入阿里云官网，找到 *产品/域名与网站* ，点击进入，如果没有阿里云账号，需要先注册，如下图所示。
 
-![](http://p5sfmckwy.bkt.clouddn.com/img/1_yumming_setup.png)
+![](https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/1_yumming_setup.png)
 
 此时你可以看到各个后缀的域名了，有 `.com` `.top` 之类的，可以看到 `.top` 的域名最低只需要2块钱就可以，购买前先查询一下你的域名是否已被注册了，购买流程就不赘述。购买完毕后，域名需要实名认证，这个过程大概一至两天就可以通过了，之后这个域名就是你属于你个人专有了。
 
-![](http://p5sfmckwy.bkt.clouddn.com/img/2_top_2_rmb.png)
+![](https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/2_top_2_rmb.png)
 
 ### 将域名映射到GitHub Pages上
 这步的目的是，当我们在浏览器中直接输入我们刚才购买的域名（比如我的 www.liuyun.fun），就可以直接跳转到我们部署到 GitHub Pages 上的博客网站，而无须输入类似 username.github.io 这样不好记的网址了。那么要如何操作呢？在上篇中，我们已经能通过 username.github.io 的网址来访问托管的博客了，为了达到刚才的目的，我们需要做的是，建立个人域名与 username.github.io 的映射关系，要完成这个映射关系，需要按照以下几个步骤进行操作。
@@ -30,34 +30,34 @@ tags: [Hexo,github,博客,独立域名]
 #### 获取你 github.io 的 IP 地址
 通过 Ping  你的github.io 这个网址，如下图所示
 
-   ![](http://p5sfmckwy.bkt.clouddn.com/img/5_ping_ip.png)
+   ![](https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/5_ping_ip.png)
 
 #### 域名服务商进行域名解析
 我这里是阿里云的后台管理界面，进入到 *云服务 DNS*  界面，点击 *解析设置* 
 
-![](http://p5sfmckwy.bkt.clouddn.com/img/3_parse_setting.png)
+![](https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/3_parse_setting.png)
 
 然后点击添加 *添加解析*
 
-![](http://p5sfmckwy.bkt.clouddn.com/img/4_添加parser.png)
+![](https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/4_添加parser.png)
 
 在弹出的界面中，选择记录类型为 `A`  类，意思是该域名的地址会跳转到我们设定的目的地，记录值方框填写刚才的 Ping 出的 IP 地址。这里我们添加两个 一个是 `www`，一个是 `@`
 
-![](http://p5sfmckwy.bkt.clouddn.com/img/6_yuming_add_parse.png)
+![](https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/6_yuming_add_parse.png)
 
 添加完毕后，结果是这样的
 
-![](http://p5sfmckwy.bkt.clouddn.com/img/7_ailiyun_setting.png)
+![](https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/7_ailiyun_setting.png)
 
 #### GitHub Pages 设定
 进入到你自己的 GitHub Pages 项目，我这里的是  cloudy-liu.github.io  ，进入该项目的 Settings ，向下拖动到 GitHub Pages 位置，目前你看到的是该网站 publish 到 https://cloudy-liu.github.io
 我们找到 Custom domain 进行自定义域名绑定，这里输入你购买的自定义域名，我这里是 www.liuyun.fun ，如下图所示。
 
-![](http://p5sfmckwy.bkt.clouddn.com/img/7_github_setting.png)
+![](https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/7_github_setting.png)
 
 保存完毕后，它 publish 的网址就更改为你刚才修改过的域名地址了，需要注意的是，刚才我们的动作，其实在 GitHub Pages 仓库中添加了一个 CNAME 的文件，该文件内容就是保存自定义域名的地址，这也就是，很多人也可以通过添加 CNAME 文件来绑定域名，其实这是一回事，只不过现在 Github 直接支持绑定自定义域名了，就不同在 push 代码了。需要注意的是，你每次更新文章时，会重新 clean 一次，因此需要将 CNAME 文件加入到你Hexo source 中，这样确保每次可以 push 到 github 仓库中, [了解更多](https://www.zhihu.com/question/28814437)
 
-![](http://p5sfmckwy.bkt.clouddn.com/img/8_after_setting_github.png)
+![](https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/8_after_setting_github.png)
 
 此时，你在浏览器中输入你自己的域名网址，就可以直接跳转到 Github Pages 的个人博客了，至此，个人博客的就绑定完毕了。
 

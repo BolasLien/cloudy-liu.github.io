@@ -56,11 +56,11 @@ rst: [[23 30]
 py -3 C:\Users\Administrator\AppData\Local\Programs\Python\Python36\Lib\site-packages\tensorboard\main.py --logdir=D:/tmp/log
 ```
 
-![](http://p5sfmckwy.bkt.clouddn.com/img/1.png)
+![](https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/1.png)
 
 然后在 chrome 浏览器中输入终端出现的信息 `http:cloudy:6066` ，回车即可看到图形了
 
-![](http://p5sfmckwy.bkt.clouddn.com/img/2.png)
+![](https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/2.png)
 
 ### 遇到的错误
 
