@@ -16,13 +16,6 @@
     </url>
 
     <url>
-        <loc>https://www.liuyun.fun/tags/%E6%9F%A5%E6%89%BE/</loc>
-        <lastmod>2018-07-15T16:08:19.435Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://www.liuyun.fun/tags/github/</loc>
         <lastmod>2019-05-22T00:59:41.686Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -60,13 +53,6 @@
     <url>
         <loc>https://www.liuyun.fun/tags/gitalk/</loc>
         <lastmod>2019-05-22T00:59:43.173Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.liuyun.fun/tags/Hexo/</loc>
-        <lastmod>2019-05-22T00:59:45.581Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -116,6 +102,20 @@
     <url>
         <loc>https://www.liuyun.fun/tags/%E5%8C%97%E5%A4%A7%E7%BB%8F%E6%B5%8E%E5%AD%A6/</loc>
         <lastmod>2019-05-22T00:59:49.388Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.liuyun.fun/tags/Hexo/</loc>
+        <lastmod>2019-05-23T16:28:54.929Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.liuyun.fun/tags/%E4%B8%83%E7%89%9B%E4%BA%91/</loc>
+        <lastmod>2019-05-23T16:28:54.929Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

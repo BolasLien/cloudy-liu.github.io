@@ -6,19 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://www.liuyun.fun">
-  <title>五大查找算法总结(Java实现版) | YunShell</title>
+  <title>Archives: 2019/5 | YunShell</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="这篇总结一下常用的查找算法。">
-<meta name="keywords" content="数据结构与算法,查找">
-<meta property="og:type" content="article">
-<meta property="og:title" content="五大查找算法总结(Java实现版)">
-<meta property="og:url" content="https://www.liuyun.fun/2018/07/15/五大查找算法总结(Java实现版)/index.html">
+  <meta name="description" content="YunShell">
+<meta property="og:type" content="website">
+<meta property="og:title" content="YunShell">
+<meta property="og:url" content="https://www.liuyun.fun/archives/2019/05/index.html">
 <meta property="og:site_name" content="YunShell">
-<meta property="og:description" content="这篇总结一下常用的查找算法。">
-<meta property="og:updated_time" content="2018-07-15T16:08:19.435Z">
+<meta property="og:description" content="YunShell">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="五大查找算法总结(Java实现版)">
-<meta name="twitter:description" content="这篇总结一下常用的查找算法。">
+<meta name="twitter:title" content="YunShell">
+<meta name="twitter:description" content="YunShell">
   
     <link rel="alternative" href="/atom.xml" title="YunShell" type="application/atom+xml">
   
@@ -171,239 +169,63 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-五大查找算法总结(Java实现版)" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      五大查找算法总结(Java实现版)
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/05/23/Hexo博客图片链接失效问题解决/" class="archive-article-date">
+  	<time datetime="2019-05-23T15:07:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-23</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/05/23/Hexo博客图片链接失效问题解决/">Hexo博客图片链接失效问题解决</a>
     </h1>
   
 
-        <!--显示阅读次数-->
-        
-          <br/>
-          <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
-          <span class="icon-sort"></span>
-          <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
-                    阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
-          </span>
-          </a>
+        <div class="article-info info-on-right">
           
-        
-        <a href="/2018/07/15/五大查找算法总结(Java实现版)/" class="archive-article-date">
-  	<time datetime="2018-07-15T15:07:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>这篇总结一下常用的查找算法。<a id="more"></a> </p>
-<h3 id="顺序查找"><a href="#顺序查找" class="headerlink" title="顺序查找"></a>顺序查找</h3><p>从一个数组中查找某个固定的 key。写法比较简单。找到了返回它的索引，否则返回 -1。</p>
-<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">sequenceSearch</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] data, <span class="hljs-keyword">int</span> len, <span class="hljs-keyword">int</span> key)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">        <span class="hljs-keyword">if</span> (data[i] == key) &#123;</span><br><span class="line">            <span class="hljs-keyword">return</span> i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>可以看到 i 会一直在比较是否越界，优化为如下，从数组后面遍历，若找到相等，则推出循环，一定会经过 i=0，返回0表示没找到</p>
-<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">sequenceSearch</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] data, <span class="hljs-keyword">int</span> len, <span class="hljs-keyword">int</span> key)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> i = len - <span class="hljs-number">1</span>;</span><br><span class="line">    data[<span class="hljs-number">0</span>] = key;</span><br><span class="line">    <span class="hljs-keyword">while</span> (data[i] != key) &#123;</span><br><span class="line">        i--;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-keyword">return</span> i; <span class="hljs-comment">// if not found i=0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-
-      
-    
-      <div class="declare">
-      <strong>本文作者：</strong>
-      YunShell
-      <br>
-      <strong>本文链接：</strong>
-      https://www.liuyun.fun/2018/07/15/五大查找算法总结(Java实现版)/
-      <br>
-      <strong>版权声明：</strong>本作品采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。转载请注明出处！
-      <!-- <br>
-      <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0"/></a> -->
-      </div>
-    
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/img/thanks.png">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-
-    <div class="article-info article-info-index">
-      
-      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数据结构与算法</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">查找</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">七牛云</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://www.liuyun.fun/2018/07/15/五大查找算法总结(Java实现版)/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
   
   
-    <a href="/2018/07/14/Hexo更换为GitTalk评论系统/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hexo-yilia使用gitment/gitalk评论系统</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#顺序查找"><span class="toc-number">1.</span> <span class="toc-text">顺序查找</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-  
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
-  
-    <div id="gitalk-container" style="padding: 0px 30px 0px 30px;"></div> 
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script type="text/javascript">
-
-if(true){
-	var gitalk = new Gitalk({
-  	clientID: '50b0b92a5cd7533c3f4f',
-  	clientSecret: '2723bec569d9c21860c9f8304a0c5c2426f7d596',
-  	repo: 'cloudy-liu.github.io',
-  	owner: 'cloudy-liu',
-  	admin: ['cloudy-liu'],
-  	id: 'Sun Jul 15 2018 23:07:28 GMT+0800',
-  	distractionFreeMode: 'true'
-})
-gitalk.render('gitalk-container') 
-}
-</script>
     
 
 
@@ -432,8 +254,8 @@ gitalk.render('gitalk-container')
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
@@ -583,6 +405,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">北大经济学</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">七牛云</a>
               </li>
             
             <div class="clearfix"></div>
