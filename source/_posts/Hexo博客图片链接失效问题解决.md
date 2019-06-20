@@ -24,15 +24,15 @@ tags: [Hexo,七牛云]
 
 ###  图片转移 Step
 
-1. 新建 `coding` 项目，将之前博客中的图片都上传上去
+* 新建 `coding` 项目，将之前博客中的图片都上传上去
 
 我因为本地没有保存之前的图片了，这个可以在七牛云上申请工单处理，可延长你的测试域名期限，我的延长了3天，然后批量下载下来了。
 
 上传完了图片后，随便点击一张图片，查看这个图片的完整链接 比如 这里：` https://coding.net/u/cloudy-liu/p/BlogPicBed/git/blob/master/1.png`，我们将其中的`blob`  替换成 `raw` ，然后在修改为 `markdown`的链接语法： `![](https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/1.png)` 就可以在 markdown 支持的文本中看到这张图片了
 
-![](https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/coding_update_to_tencent_cloud.png)
+![](https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/coding_new_pic_link.png)
 
-2. 使用新的图片链接替换你原博文中的图片链接
+* 使用新的图片链接替换你原博文中的图片链接
 
 因为用 `markdown` 写的博文，图片都是链接的形式，比如之前的博文图片链接都是七牛云域名的图片，如 `![](http://p5sfmckwy.bkt.clouddn.com/img/2_top_2_rmb.png)`，现在仅需要替换为新的域名即可，因为图片的名字不用改，只需要修改之前的域名为 `coding` 新建项目上的域名即可，当然博文非常多，我这里写了简单的 python 脚本来一次性批量处理
 

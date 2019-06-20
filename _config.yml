@@ -6,8 +6,8 @@
 title: YunShell
 subtitle: 怕什么真理无穷,进步一寸,有进步一寸的欢喜
 description: YunShell 
-author: YunShell
-language:
+author: cloudy
+language: zh-CN
 timezone:
 
 # URL
@@ -72,7 +72,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: yilia
+theme: icarus
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
