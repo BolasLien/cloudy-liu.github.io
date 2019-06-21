@@ -2,6 +2,7 @@
 title: 博文样式测试
 date: 2018-02-027 20:30:33
 tags: [Hexo,Test]
+toc: true
 ---
 
 
@@ -28,8 +29,7 @@ tags: [Hexo,Test]
 
 # 代码样式
 
-```python
-# python
+```python test.py
 def fibc(n):
     assert isinstance(n, int) and n >= 0
     return fibc(n - 1) + fibc(n - 2) if n > 2 else n
