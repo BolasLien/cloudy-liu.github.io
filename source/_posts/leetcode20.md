@@ -1,7 +1,7 @@
 ---
-title: leetcode20-括号匹配
+title: 括号匹配算法
 date: 2018-07-01 13:21:55
-tags: [leetcode]
+tags: [leetcode,数据结构与算法]
 ---
 
 括号匹配习题 <!-- more --> 
