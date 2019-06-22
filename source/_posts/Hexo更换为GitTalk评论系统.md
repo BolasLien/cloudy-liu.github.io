@@ -1,5 +1,5 @@
 ---
-title: Hexo-yilia使用gitment/gitalk评论系统
+title: Hexo-yilia使用gitalk/gitment评论系统
 date: 2018-07-14 22:07:28
 tags: [Hexo,yilia,gitment,gitalk]
 ---
