@@ -7,7 +7,13 @@ date: 2019-06-23 02:36:10
 
 ## 关于博主
 
- Android Framework Developer
+* ` Android Framework Developer`, `Performance`
+
+* 不怎么更新的公众号(苦笑)
+
+![](https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/wechat_qrcode.jpg)
+
+
 
 ## 博客历史
 
