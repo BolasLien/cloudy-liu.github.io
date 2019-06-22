@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html  lang="zh">
+<head>
+    <meta charset="utf-8">
+<title>Hexo 主题迁移到 icarus - YunShell</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+
+
+    <meta name="description" content="yilia 在大屏下被拉伸的太长了，一直想换三栏模式，最近看到 icarus主题，设计的非常漂亮，于是果断换 (怎么现在尽是在折腾Hexo 主题啊，Orz…)">
+<meta name="keywords" content="Hexo,icarus">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo 主题迁移到 icarus">
+<meta property="og:url" content="https://www.liuyun.fun/2019/06/23/Hexo主题迁移到icarus/index.html">
+<meta property="og:site_name" content="YunShell">
+<meta property="og:description" content="yilia 在大屏下被拉伸的太长了，一直想换三栏模式，最近看到 icarus主题，设计的非常漂亮，于是果断换 (怎么现在尽是在折腾Hexo 主题啊，Orz…)">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://www.liuyun.fun/images/og_image.png">
+<meta property="og:updated_time" content="2019-06-22T18:33:49.624Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo 主题迁移到 icarus">
+<meta name="twitter:description" content="yilia 在大屏下被拉伸的太长了，一直想换三栏模式，最近看到 icarus主题，设计的非常漂亮，于是果断换 (怎么现在尽是在折腾Hexo 主题啊，Orz…)">
+<meta name="twitter:image" content="https://www.liuyun.fun/images/og_image.png">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/favicon.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/androidstudio.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+    
+    
+    
+        <script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-3-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="Hexo 主题迁移到 icarus" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item"
+                href="/">Home</a>
+                
+                <a class="navbar-item"
+                href="/archives">Archives</a>
+                
+                <a class="navbar-item"
+                href="/tags">Tags</a>
+                
+                <a class="navbar-item"
+                href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    
+                    <a class="navbar-item" target="_blank" title="Fork on Github" href="https://github.com/cloudy-liu">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                <a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
+                
+                <a class="navbar-item search" title="搜索" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-9-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-23T15:07:28.000Z"><i class="far fa-calendar-alt">&nbsp;</i>2019-06-23</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    6 分钟 读完 (大约 914 个字)
+                </span>
+                
+                
+                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
+                    <i class="far fa-eye"></i>
+                    <span id="busuanzi_value_page_pv">0</span>次访问
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                Hexo 主题迁移到 icarus
+            
+        </h1>
+        <div class="content">
+            <p><code>yilia</code> 在大屏下被拉伸的太长了，一直想换三栏模式，最近看到 <code>icarus</code>主题，设计的非常漂亮，于是果断换 (怎么现在尽是在折腾Hexo 主题啊，Orz…)   <a id="more"></a> </p>
+<h2 id="配置-icarus-主题"><a href="#配置-icarus-主题" class="headerlink" title="配置 icarus 主题"></a>配置 icarus 主题</h2><p>下载 <a href="https://github.com/ppoffice/hexo-theme-icarus/releases" target="_blank" rel="noopener">icarus</a> ，在 <code>hexo</code> 的 <code>themes</code>  文件夹，新加入 <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">icarus</a> 目录，配置 <code>hexo</code> 的根目录的 <code>_config.yml</code> </p>
+<figure class="highlight diff hljs"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-deletion">-theme: yilia</span></span><br><span class="line"><span class="hljs-addition">+theme: icarus</span></span><br></pre></td></tr></table></figure>
+<p>然后更新部署就好了</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
+<h2 id="自定义-icarus-主题"><a href="#自定义-icarus-主题" class="headerlink" title="自定义 icarus 主题"></a>自定义 icarus 主题</h2><p>默认配置也基本能用了，但是有一个痛点就是，阅读模式文章宽度太短了，还是根据个人习惯做下配置下</p>
+<h3 id="配置-gitalk-评论"><a href="#配置-gitalk-评论" class="headerlink" title="配置 gitalk 评论"></a>配置 gitalk 评论</h3><p><code>icarus</code> 默认是支持 <code>gitalk</code> 的，所以只需要在 <code>themes/icarus/_config.yml</code> 中设置一下即可</p>
+<figure class="highlight diff hljs"><figcaption><span>themes/icarus/_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">comment:</span><br><span class="line">    # Name of the comment plugin</span><br><span class="line">    type: gitalk</span><br><span class="line">    owner: cloudy-liu         # (required) GitHub user name</span><br><span class="line">    repo: cloudy-liu.github.io   # (required) GitHub repository name</span><br><span class="line">    client_id: xxxx # (required) OAuth application client id</span><br><span class="line">    client_secret: xxx # (required) OAuth application client secret</span><br><span class="line">    admin: cloudy-liu</span><br></pre></td></tr></table></figure>
+<p>还没配置的可以<a href="https://www.liuyun.fun/2018/07/14/Hexo%E6%9B%B4%E6%8D%A2%E4%B8%BAGitTalk%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/">参考这篇</a>做配置</p>
+<h3 id="代码高亮"><a href="#代码高亮" class="headerlink" title="代码高亮"></a>代码高亮</h3><p><a href="https://github.com/highlightjs/highlight.js/tree/master/src/styles" target="_blank" rel="noopener">代码高亮款式</a> , <a href="https://highlightjs.org/" target="_blank" rel="noopener">预览参见这里</a>，<code>Android</code> 程序员选择 <code>androidstudio</code> 效果不错</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">highlight: androidstudio</span><br></pre></td></tr></table></figure>
+<h3 id="调整阅读模式双栏"><a href="#调整阅读模式双栏" class="headerlink" title="调整阅读模式双栏"></a>调整阅读模式双栏</h3><p>判断 <code>post</code> 页面，显示目录 <code>toc</code> ，修改宽度</p>
+<figure class="highlight diff hljs"><figcaption><span>themes/icarus/includes/helpers/layout.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-deletion">-        return widgets.filter(widget =&gt; widget.hasOwnProperty('position') &amp;&amp; widget.position === position);</span></span><br><span class="line"><span class="hljs-addition">+        if (this.page.layout !== 'post') &#123;</span></span><br><span class="line"><span class="hljs-addition">+            return widgets.filter(widget =&gt; widget.hasOwnProperty('position') &amp;&amp; widget.position === position);</span></span><br><span class="line"><span class="hljs-addition">+        &#125;</span></span><br><span class="line"><span class="hljs-addition">+        if (position === 'left') &#123;</span></span><br><span class="line"><span class="hljs-addition">+            return widgets.filter(widget =&gt; widget.hasOwnProperty('position') &amp;&amp; (widget.type === 'toc'));</span></span><br><span class="line"><span class="hljs-addition">+        &#125; else &#123;</span></span><br><span class="line"><span class="hljs-addition">+            return []</span></span><br><span class="line"><span class="hljs-addition">+        &#125;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight diff hljs"><figcaption><span>themes/icarus/layout/common/widget.ejs</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">         case 2:</span><br><span class="line"><span class="hljs-deletion">-            return 'is-4-tablet is-4-desktop is-4-widescreen';</span></span><br><span class="line"><span class="hljs-addition">+            return 'is-4-tablet is-4-desktop is-3-widescreen';</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight diff hljs"><figcaption><span>themes/icarus/layout/layout.ejs</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"> &lt;head&gt;</span><br><span class="line">     &lt;%- partial('common/head') %&gt;</span><br><span class="line"> &lt;/head&gt;</span><br><span class="line"><span class="hljs-deletion">-&lt;body class="is-&lt;%= column_count() %&gt;-column"&gt;</span></span><br><span class="line"><span class="hljs-addition">+&lt;body class="is-3-column"&gt;</span></span><br><span class="line">     &lt;%- partial('common/navbar', &#123; page &#125;) %&gt;</span><br><span class="line">             case 2:</span><br><span class="line"><span class="hljs-deletion">-                return 'is-8-tablet is-8-desktop is-8-widescreen';</span></span><br><span class="line"><span class="hljs-addition">+                return 'is-8-tablet is-8-desktop is-9-widescreen';</span></span><br><span class="line">             case 3:</span><br><span class="line">                 return 'is-8-tablet is-8-desktop is-6-widescreen'</span><br><span class="line">         &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight diff hljs"><figcaption><span>themes/icarus/source/css/style.styl</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">     .is-2-column .container</span><br><span class="line">         max-width: screen-desktop - 2 * gap</span><br><span class="line">         width: screen-desktop - 2 * gap</span><br><span class="line"><span class="hljs-addition">+    .is-3-column .container</span></span><br><span class="line"><span class="hljs-addition">+        max-width: screen-widescreen - gap</span></span><br><span class="line"><span class="hljs-addition">+        width: screen-widescreen - gap</span></span><br><span class="line"> @media screen and (min-width: screen-fullhd)</span><br><span class="line"><span class="hljs-addition">+    .is-3-column .container</span></span><br><span class="line"><span class="hljs-addition">+        max-width: screen-fullhd - 2 * gap</span></span><br><span class="line"><span class="hljs-addition">+        width: screen-fullhd - 2 * gap</span></span><br></pre></td></tr></table></figure>
+<h3 id="增加文章版权"><a href="#增加文章版权" class="headerlink" title="增加文章版权"></a>增加文章版权</h3><figure class="highlight diff hljs"><figcaption><span>themes/icarus/layout/common/article.ejs</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">         &lt;div class="content"&gt;</span><br><span class="line">             &lt;%- index &amp;&amp; post.excerpt ? post.excerpt : post.content %&gt;</span><br><span class="line">         &lt;/div&gt;</span><br><span class="line"><span class="hljs-addition">+        &lt;% if (!index &amp;&amp; post.layout === 'post' &amp;&amp; post.copyright !== false) &#123; %&gt;</span></span><br><span class="line"><span class="hljs-addition">+            &lt;ul class="post-copyright"&gt;</span></span><br><span class="line"><span class="hljs-addition">+            &lt;li&gt;&lt;strong&gt;本文标题：&lt;/strong&gt;&lt;a href="&lt;%= post.permalink %&gt;"&gt;&lt;%= page.title %&gt;&lt;/a&gt;&lt;/li&gt;</span></span><br><span class="line"><span class="hljs-addition">+            &lt;li&gt;&lt;strong&gt;本文作者：&lt;/strong&gt;&lt;a href="&lt;%= theme.url %&gt;"&gt;&lt;%= theme.author %&gt;&lt;/a&gt;&lt;/li&gt;</span></span><br><span class="line"><span class="hljs-addition">+            &lt;li&gt;&lt;strong&gt;本文链接：&lt;/strong&gt;&lt;a href="&lt;%= post.permalink %&gt;"&gt;&lt;%= post.permalink %&gt;&lt;/a&gt;&lt;/li&gt;</span></span><br><span class="line"><span class="hljs-addition">+            &lt;li&gt;&lt;strong&gt;发布时间：&lt;/strong&gt;&lt;%= post.date.format("YYYY-MM-DD") %&gt;&lt;/li&gt;</span></span><br><span class="line"><span class="hljs-addition">+            &lt;li&gt;&lt;strong&gt;版权声明：&lt;/strong&gt;本博客所有文章除特别声明外，均采用 &lt;a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="external nofollow" target="_blank"&gt;CC BY-NC-SA 4.0&lt;/a&gt; 许可协议。转载请注明出处！</span></span><br><span class="line"><span class="hljs-addition">+            &lt;/li&gt;</span></span><br><span class="line"><span class="hljs-addition">+            &lt;/ul&gt;</span></span><br><span class="line"><span class="hljs-addition">+        &lt;% &#125; %&gt;</span></span><br><span class="line">         &lt;% if (!index &amp;&amp; post.tags &amp;&amp; post.tags.length) &#123; %&gt;</span><br></pre></td></tr></table></figure>
+<p>下面文件加入格式</p>
+<figure class="highlight diff hljs"><figcaption><span>themes/icarus/source/css/style.styl</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">             border: none</span><br><span class="line">     .file</span><br><span class="line">         all: initial</span><br><span class="line"><span class="hljs-addition">+</span></span><br><span class="line"><span class="hljs-addition">+.post-copyright</span></span><br><span class="line"><span class="hljs-addition">+    font-size: 1rem</span></span><br><span class="line"><span class="hljs-addition">+    letter-spacing: 0.02rem</span></span><br><span class="line"><span class="hljs-addition">+    word-break: break-all</span></span><br><span class="line"><span class="hljs-addition">+    margin: 2.5rem 0 0</span></span><br><span class="line"><span class="hljs-addition">+    padding: 1rem 1rem</span></span><br><span class="line"><span class="hljs-addition">+    border-left: 3px solid #FF1700</span></span><br><span class="line"><span class="hljs-addition">+    background-color: #F9F9F9</span></span><br></pre></td></tr></table></figure>
+<p>这里大部分是参照 <a href="https://www.alphalxy.com/2019/03/customize-icarus/" target="_blank" rel="noopener">自定义icarus</a> 做的修改(点赞)</p>
+<h3 id="更新logo"><a href="#更新logo" class="headerlink" title="更新logo"></a>更新logo</h3><p><code>icarus</code> 有默认的 logo，这里想改变一下，logo 是在 <code>themes\icarus\source\images</code> 里面<code>logo.svg</code> 文件，我们只需要替换成自己的 logo 文件即可，可以从<a href="https://icomoon.io/app/#/select" target="_blank" rel="noopener">这里</a> 去获取。</p>
+<h3 id="总访问量统计"><a href="#总访问量统计" class="headerlink" title="总访问量统计"></a>总访问量统计</h3><p><code>icarus</code> 是用卜算子统计，默认只统计了访问人数，并没有访问量统计，需要在页脚修改下</p>
+<figure class="highlight diff hljs"><figcaption><span>themes/icarus/layout/common/footer.ejs</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">@@ -15,9 +15,8 @@</span></span><br><span class="line">                         href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank"&gt;Icarus&lt;/a&gt;</span><br><span class="line">                 &lt;% if (has_config('plugins.busuanzi') ? get_config('plugins.busuanzi') : false) &#123; %&gt;</span><br><span class="line">                 &lt;br&gt;</span><br><span class="line"><span class="hljs-deletion">-                &lt;span id="busuanzi_container_site_uv"&gt;</span></span><br><span class="line"><span class="hljs-deletion">-                &lt;%- _p('plugin.visitor', '&lt;span id="busuanzi_value_site_uv"&gt;0&lt;/span&gt;') %&gt;</span></span><br><span class="line"><span class="hljs-deletion">-                &lt;/span&gt;</span></span><br><span class="line"><span class="hljs-addition">+                &lt;span id="busuanzi_container_site_uv"&gt; 来访 &lt;span id="busuanzi_value_site_uv"&gt;&lt;/span&gt;人&lt;/span&gt;</span></span><br><span class="line"><span class="hljs-addition">+                &lt;span id="busuanzi_container_site_pv"&gt;, 总访问 &lt;span id="busuanzi_value_site_pv"&gt;&lt;/span&gt;次&lt;/span&gt;</span></span><br><span class="line">                 &lt;% &#125; %&gt;</span><br><span class="line">                 &lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<p>修改主题后，建议先进行清理，不然可能由于缓存问题，导致本地预览与部署不一致，KO !</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="https://blog.zhangruipeng.me/hexo-theme-icarus/" target="_blank" rel="noopener">icarus文档</a></li>
+<li><a href="https://www.alphalxy.com/2019/03/customize-icarus/" target="_blank" rel="noopener">自定义 icarus</a></li>
+</ul>
+
+        </div>
+        
+            <ul class="post-copyright">
+            <li><strong>本文标题：</strong><a href="https://www.liuyun.fun/2019/06/23/Hexo主题迁移到icarus/">Hexo 主题迁移到 icarus</a></li>
+            <li><strong>本文作者：</strong><a href="https://www.liuyun.fun">cloudy</a></li>
+            <li><strong>本文链接：</strong><a href="https://www.liuyun.fun/2019/06/23/Hexo主题迁移到icarus/">https://www.liuyun.fun/2019/06/23/Hexo主题迁移到icarus/</a></li>
+            <li><strong>发布时间：</strong>2019-06-23</li>
+            <li><strong>版权声明：</strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！
+            </li>
+            </ul>
+        
+        
+        <hr style="height:1px;margin:1rem 0"/>
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <i class="fas fa-tags has-text-grey"></i>&nbsp;
+                    <a class="has-link-grey -link" href="/tags/Hexo/">Hexo</a>,&nbsp;<a class="has-link-grey -link" href="/tags/icarus/">icarus</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
+                
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>微信</span>
+    <div class="qrcode"><img src="/images/pay.png" alt="微信"></div>
+</a>
+
+                
+        </div>
+    </div>
+</div>
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/05/23/Hexo博客图片链接失效问题解决/">
+                <span class="level-item">Hexo博客图片链接失效问题解决</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">评论</h3>
+        
+<div id="comment-container"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.4.1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.4.1/dist/gitalk.min.js"></script>
+<script>
+    var gitalk = new Gitalk({
+        clientID: '50b0b92a5cd7533c3f4f',
+        clientSecret: '2723bec569d9c21860c9f8304a0c5c2426f7d596',
+        id: '605a16fc6019623d2450ec33f262217b',
+        repo: 'cloudy-liu.github.io',
+        owner: 'cloudy-liu',
+        admin: "cloudy-liu"
+    })
+    gitalk.render('comment-container')
+</script>
+
+    </div>
+</div>
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+    
+        
+<div class="card widget column-left is-sticky" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                目录
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#配置-icarus-主题">
+        <span class="has-mr-6">1</span>
+        <span>配置 icarus 主题</span>
+        </a></li><li>
+        <a class="is-flex" href="#自定义-icarus-主题">
+        <span class="has-mr-6">2</span>
+        <span>自定义 icarus 主题</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#配置-gitalk-评论">
+        <span class="has-mr-6">2.1</span>
+        <span>配置 gitalk 评论</span>
+        </a></li><li>
+        <a class="is-flex" href="#代码高亮">
+        <span class="has-mr-6">2.2</span>
+        <span>代码高亮</span>
+        </a></li><li>
+        <a class="is-flex" href="#调整阅读模式双栏">
+        <span class="has-mr-6">2.3</span>
+        <span>调整阅读模式双栏</span>
+        </a></li><li>
+        <a class="is-flex" href="#增加文章版权">
+        <span class="has-mr-6">2.4</span>
+        <span>增加文章版权</span>
+        </a></li><li>
+        <a class="is-flex" href="#更新logo">
+        <span class="has-mr-6">2.5</span>
+        <span>更新logo</span>
+        </a></li><li>
+        <a class="is-flex" href="#总访问量统计">
+        <span class="has-mr-6">2.6</span>
+        <span>总访问量统计</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#参考资料">
+        <span class="has-mr-6">3</span>
+        <span>参考资料</span>
+        </a></li></ul>
+        </div>
+    </div>
+</div>
+
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+        </div>
+    
+</div>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="Hexo 主题迁移到 icarus" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2019 cloudy&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
+                
+                <br>
+                <span id="busuanzi_container_site_uv"> 来访 <span id="busuanzi_value_site_uv"></span>人</span>
+                <span id="busuanzi_container_site_pv">, 总访问 <span id="busuanzi_value_site_pv"></span>次</span>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Fork on Github" href="https://github.com/cloudy-liu">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("zh-CN");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="回到顶端" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+    <script src="/js/clipboard.js" defer></script>
+    
+
+    
+    
+    
+
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="想要查找什么..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '文章',
+                PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+                UNTITLED: '(无标题)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>
