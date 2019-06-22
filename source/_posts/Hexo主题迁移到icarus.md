@@ -162,6 +162,13 @@ highlight: androidstudio
                  </p>
 ```
 
+修改主题后，建议先进行清理，不然可能由于缓存问题，导致本地预览与部署不一致，KO !
+
+```
+hexo clean
+hexo d -g
+```
+
 ## 参考资料
 
 * [icarus文档]( https://blog.zhangruipeng.me/hexo-theme-icarus/)
