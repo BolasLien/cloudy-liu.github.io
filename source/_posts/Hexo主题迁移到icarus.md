@@ -46,7 +46,7 @@ comment:
 
 [代码高亮款式](https://github.com/highlightjs/highlight.js/tree/master/src/styles) , [预览参见这里](https://highlightjs.org/)，`Android` 程序员选择 `androidstudio` 效果不错
 
-```themes/icarus/_config.yml
+```diff themes/icarus/_config.yml
 highlight: androidstudio
 ```
 
@@ -59,7 +59,7 @@ highlight: androidstudio
 +        if (this.page.layout !== 'post') {
 +            return widgets.filter(widget => widget.hasOwnProperty('position') && widget.position === position);
 +        }
-+        if (position === 'left') {
++        if (position === 'right') {
 +            return widgets.filter(widget => widget.hasOwnProperty('position') && (widget.type === 'toc'));
 +        } else {
 +            return []

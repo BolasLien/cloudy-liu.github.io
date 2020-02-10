@@ -81,10 +81,13 @@ npm run dist
 
 ### 安装不蒜子脚本
 
-在 `themes\yilia\layout\_partial\after-footer.ejs`最后添加
+`udpate: 2019/9/15`
+
+在 `themes\yilia\layout\_partial\after-footer.ejs`最后添加，注意以下新的域名才有效，老的已经失效了
 
 ```
-<script  async  src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
 ```
 
 ### 添加统计网站访问量
