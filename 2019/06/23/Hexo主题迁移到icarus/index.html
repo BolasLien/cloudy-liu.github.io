@@ -16,7 +16,7 @@
 <meta property="og:description" content="yilia 在大屏下被拉伸的太长了，一直想换三栏模式，最近看到 icarus主题，设计的非常漂亮，于是果断换 (怎么现在尽是在折腾Hexo 主题啊，Orz…)">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://www.liuyun.fun/images/og_image.png">
-<meta property="og:updated_time" content="2019-06-22T18:33:49.624Z">
+<meta property="og:updated_time" content="2020-02-10T13:56:16.764Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo 主题迁移到 icarus">
 <meta name="twitter:description" content="yilia 在大屏下被拉伸的太长了，一直想换三栏模式，最近看到 icarus主题，设计的非常漂亮，于是果断换 (怎么现在尽是在折腾Hexo 主题啊，Orz…)">
@@ -161,7 +161,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    6 分钟 读完 (大约 914 个字)
+                    6 分钟 读完 (大约 915 个字)
                 </span>
                 
                 
@@ -189,9 +189,9 @@
 <figure class="highlight diff hljs"><figcaption><span>themes/icarus/_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">comment:</span><br><span class="line">    # Name of the comment plugin</span><br><span class="line">    type: gitalk</span><br><span class="line">    owner: cloudy-liu         # (required) GitHub user name</span><br><span class="line">    repo: cloudy-liu.github.io   # (required) GitHub repository name</span><br><span class="line">    client_id: xxxx # (required) OAuth application client id</span><br><span class="line">    client_secret: xxx # (required) OAuth application client secret</span><br><span class="line">    admin: cloudy-liu</span><br></pre></td></tr></table></figure>
 <p>还没配置的可以<a href="https://www.liuyun.fun/2018/07/14/Hexo%E6%9B%B4%E6%8D%A2%E4%B8%BAGitTalk%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/">参考这篇</a>做配置</p>
 <h3 id="代码高亮"><a href="#代码高亮" class="headerlink" title="代码高亮"></a>代码高亮</h3><p><a href="https://github.com/highlightjs/highlight.js/tree/master/src/styles" target="_blank" rel="noopener">代码高亮款式</a> , <a href="https://highlightjs.org/" target="_blank" rel="noopener">预览参见这里</a>，<code>Android</code> 程序员选择 <code>androidstudio</code> 效果不错</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">highlight: androidstudio</span><br></pre></td></tr></table></figure>
+<figure class="highlight diff hljs"><figcaption><span>themes/icarus/_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">highlight: androidstudio</span><br></pre></td></tr></table></figure>
 <h3 id="调整阅读模式双栏"><a href="#调整阅读模式双栏" class="headerlink" title="调整阅读模式双栏"></a>调整阅读模式双栏</h3><p>判断 <code>post</code> 页面，显示目录 <code>toc</code> ，修改宽度</p>
-<figure class="highlight diff hljs"><figcaption><span>themes/icarus/includes/helpers/layout.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-deletion">-        return widgets.filter(widget =&gt; widget.hasOwnProperty('position') &amp;&amp; widget.position === position);</span></span><br><span class="line"><span class="hljs-addition">+        if (this.page.layout !== 'post') &#123;</span></span><br><span class="line"><span class="hljs-addition">+            return widgets.filter(widget =&gt; widget.hasOwnProperty('position') &amp;&amp; widget.position === position);</span></span><br><span class="line"><span class="hljs-addition">+        &#125;</span></span><br><span class="line"><span class="hljs-addition">+        if (position === 'left') &#123;</span></span><br><span class="line"><span class="hljs-addition">+            return widgets.filter(widget =&gt; widget.hasOwnProperty('position') &amp;&amp; (widget.type === 'toc'));</span></span><br><span class="line"><span class="hljs-addition">+        &#125; else &#123;</span></span><br><span class="line"><span class="hljs-addition">+            return []</span></span><br><span class="line"><span class="hljs-addition">+        &#125;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight diff hljs"><figcaption><span>themes/icarus/includes/helpers/layout.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-deletion">-        return widgets.filter(widget =&gt; widget.hasOwnProperty('position') &amp;&amp; widget.position === position);</span></span><br><span class="line"><span class="hljs-addition">+        if (this.page.layout !== 'post') &#123;</span></span><br><span class="line"><span class="hljs-addition">+            return widgets.filter(widget =&gt; widget.hasOwnProperty('position') &amp;&amp; widget.position === position);</span></span><br><span class="line"><span class="hljs-addition">+        &#125;</span></span><br><span class="line"><span class="hljs-addition">+        if (position === 'right') &#123;</span></span><br><span class="line"><span class="hljs-addition">+            return widgets.filter(widget =&gt; widget.hasOwnProperty('position') &amp;&amp; (widget.type === 'toc'));</span></span><br><span class="line"><span class="hljs-addition">+        &#125; else &#123;</span></span><br><span class="line"><span class="hljs-addition">+            return []</span></span><br><span class="line"><span class="hljs-addition">+        &#125;</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight diff hljs"><figcaption><span>themes/icarus/layout/common/widget.ejs</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">         case 2:</span><br><span class="line"><span class="hljs-deletion">-            return 'is-4-tablet is-4-desktop is-4-widescreen';</span></span><br><span class="line"><span class="hljs-addition">+            return 'is-4-tablet is-4-desktop is-3-widescreen';</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight diff hljs"><figcaption><span>themes/icarus/layout/layout.ejs</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"> &lt;head&gt;</span><br><span class="line">     &lt;%- partial('common/head') %&gt;</span><br><span class="line"> &lt;/head&gt;</span><br><span class="line"><span class="hljs-deletion">-&lt;body class="is-&lt;%= column_count() %&gt;-column"&gt;</span></span><br><span class="line"><span class="hljs-addition">+&lt;body class="is-3-column"&gt;</span></span><br><span class="line">     &lt;%- partial('common/navbar', &#123; page &#125;) %&gt;</span><br><span class="line">             case 2:</span><br><span class="line"><span class="hljs-deletion">-                return 'is-8-tablet is-8-desktop is-8-widescreen';</span></span><br><span class="line"><span class="hljs-addition">+                return 'is-8-tablet is-8-desktop is-9-widescreen';</span></span><br><span class="line">             case 3:</span><br><span class="line">                 return 'is-8-tablet is-8-desktop is-6-widescreen'</span><br><span class="line">         &#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight diff hljs"><figcaption><span>themes/icarus/source/css/style.styl</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">     .is-2-column .container</span><br><span class="line">         max-width: screen-desktop - 2 * gap</span><br><span class="line">         width: screen-desktop - 2 * gap</span><br><span class="line"><span class="hljs-addition">+    .is-3-column .container</span></span><br><span class="line"><span class="hljs-addition">+        max-width: screen-widescreen - gap</span></span><br><span class="line"><span class="hljs-addition">+        width: screen-widescreen - gap</span></span><br><span class="line"> @media screen and (min-width: screen-fullhd)</span><br><span class="line"><span class="hljs-addition">+    .is-3-column .container</span></span><br><span class="line"><span class="hljs-addition">+        max-width: screen-fullhd - 2 * gap</span></span><br><span class="line"><span class="hljs-addition">+        width: screen-fullhd - 2 * gap</span></span><br></pre></td></tr></table></figure>
@@ -298,11 +298,12 @@
 </div>
 </div>
                 
+                
 
 
 
 
-<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-3 column-right ">
     
         
 <div class="card widget column-left is-sticky" id="toc">
@@ -354,13 +355,8 @@
 
     
     
-        <div class="column-right-shadow is-hidden-widescreen ">
-        
-        </div>
-    
 </div>
 
-                
             </div>
         </div>
     </section>
@@ -374,7 +370,7 @@
                 
                 </a>
                 <p class="is-size-7">
-                &copy; 2019 cloudy&nbsp;
+                &copy; 2020 cloudy&nbsp;
                 Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a
                         href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
                 

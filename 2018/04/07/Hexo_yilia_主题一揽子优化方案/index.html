@@ -16,7 +16,7 @@
 <meta property="og:description" content="在用 Hexo 搭建完毕后，接着就寻找主题了，对比了几个主题">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://www.liuyun.fun/images/og_image.png">
-<meta property="og:updated_time" content="2019-05-22T00:59:42.770Z">
+<meta property="og:updated_time" content="2019-09-15T12:36:54.096Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo yilia 主题一揽子使用方案">
 <meta name="twitter:description" content="在用 Hexo 搭建完毕后，接着就寻找主题了，对比了几个主题">
@@ -161,7 +161,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    10 分钟 读完 (大约 1522 个字)
+                    10 分钟 读完 (大约 1543 个字)
                 </span>
                 
                 
@@ -219,8 +219,9 @@
 </ul>
 <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd 到 yilia 目录下</span><br><span class="line">npm install</span><br><span class="line">npm run dev</span><br><span class="line">npm run dist</span><br></pre></td></tr></table></figure>
 <h2 id="增加不蒜子统计"><a href="#增加不蒜子统计" class="headerlink" title="增加不蒜子统计"></a><a href="http://ibruce.info/2015/04/04/busuanzi/" target="_blank" rel="noopener">增加不蒜子统计</a></h2><p>利用这个统计，可以知道你博客的访问量</p>
-<h3 id="安装不蒜子脚本"><a href="#安装不蒜子脚本" class="headerlink" title="安装不蒜子脚本"></a>安装不蒜子脚本</h3><p>在 <code>themes\yilia\layout\_partial\after-footer.ejs</code>最后添加</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script  async  src=&quot;https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="安装不蒜子脚本"><a href="#安装不蒜子脚本" class="headerlink" title="安装不蒜子脚本"></a>安装不蒜子脚本</h3><p><code>udpate: 2019/9/15</code></p>
+<p>在 <code>themes\yilia\layout\_partial\after-footer.ejs</code>最后添加，注意以下新的域名才有效，老的已经失效了</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;script async src=&quot;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 <h3 id="添加统计网站访问量"><a href="#添加统计网站访问量" class="headerlink" title="添加统计网站访问量"></a>添加统计网站访问量</h3><p>修改 <code>themes\yilia\layout\_partial\footer.ejs</code>，包括访客数和站点访问总量</p>
 <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># PV方式，单个用户连续点击 n 篇，记录 n 次记录值</span><br><span class="line">&lt;span id=&quot;busuanzi_container_site_pv&quot;&gt;    本站总访问量&lt;span id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/span&gt;次&lt;/span&gt;</span><br><span class="line"></span><br><span class="line"># UV方式，单个用户连续点击 n 篇，记录 1 次记录值</span><br><span class="line">&lt;span id=&quot;busuanzi_container_site_uv&quot;&gt;  本站访客数&lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt;人次&lt;/span&gt;</span><br></pre></td></tr></table></figure>
 <h3 id="单篇文章点击量"><a href="#单篇文章点击量" class="headerlink" title="单篇文章点击量"></a>单篇文章点击量</h3><ul>
@@ -361,11 +362,12 @@
 </div>
 </div>
                 
+                
 
 
 
 
-<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-3 column-right ">
     
         
 <div class="card widget column-left is-sticky" id="toc">
@@ -453,13 +455,8 @@
 
     
     
-        <div class="column-right-shadow is-hidden-widescreen ">
-        
-        </div>
-    
 </div>
 
-                
             </div>
         </div>
     </section>
@@ -473,7 +470,7 @@
                 
                 </a>
                 <p class="is-size-7">
-                &copy; 2019 cloudy&nbsp;
+                &copy; 2020 cloudy&nbsp;
                 Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a
                         href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
                 
