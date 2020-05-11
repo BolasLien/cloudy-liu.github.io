@@ -20,7 +20,7 @@ tags: [Hexo,七牛云]
 
 最后经过选择，使用 `coding` 项目作为图床，`coding`跟腾讯云开发者绑定后，项目数和速度都免费畅享，也就是项目可以一直开下去，下图就是升级之后的好处
 
-![](https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/coding_update_to_tencent_cloud.png)
+![](https://cloudy-liu.coding.net/p/BlogPicBed/d/BlogPicBed/git/raw/master/coding_update_to_tencent_cloud.png)
 
 ###  图片转移 Step
 
@@ -28,9 +28,9 @@ tags: [Hexo,七牛云]
 
 我因为本地没有保存之前的图片了，这个可以在七牛云上申请工单处理，可延长你的测试域名期限，我的延长了3天，然后批量下载下来了。
 
-上传完了图片后，随便点击一张图片，查看这个图片的完整链接 比如 这里：` https://coding.net/u/cloudy-liu/p/BlogPicBed/git/blob/master/1.png`，我们将其中的`blob`  替换成 `raw` ，然后在修改为 `markdown`的链接语法： `![](https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/1.png)` 就可以在 markdown 支持的文本中看到这张图片了
+上传完了图片后，随便点击一张图片，查看这个图片的完整链接 比如 这里：` https://coding.net/u/cloudy-liu/p/BlogPicBed/git/blob/master/1.png`，我们将其中的`blob`  替换成 `raw` ，然后在修改为 `markdown`的链接语法： `![](https://cloudy-liu.coding.net/p/BlogPicBed/d/BlogPicBed/git/raw/master/1.png)` 就可以在 markdown 支持的文本中看到这张图片了
 
-![](https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/coding_new_pic_link.png)
+![](https://cloudy-liu.coding.net/p/BlogPicBed/d/BlogPicBed/git/raw/master/coding_new_pic_link.png)
 
 * 使用新的图片链接替换你原博文中的图片链接
 
@@ -85,3 +85,13 @@ if __name__ == '__main__':
   ```
 
 * 修正后，在更新 `hexo d -g` 进行更新博客即可，图床即更换了
+
+
+
+**更新**
+
+Coding 因为最近调整，导致原有的个人项目被迁移，但是迁移后的项目默认没有public，所以想要将 coding 做图床，需要将该项目设置为 public 的， 路径为 `代码仓库` -> `仓库设置` -> `公开源代码` ，然后再利用 `replacce_pic.py` 进行更新
+
+
+
+最后编辑于 2020-05-11

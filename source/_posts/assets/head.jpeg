@@ -1,0 +1,24 @@
+<!doctype html><html lang="zh-cmn-Hans"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta http-equiv="Cache-Control" content="no-cache"><meta name="Keywords" content="项目管理、需求管理、缺陷管理、Bug Tracking、Bug管理、代码托管、代码评审、Code Review、敏捷开发、看板、迭代、流水线、Wiki、DevOps、Git、SVN、持续集成、CI、Jenkins、CD、测试管理、自动构建、Pages 服务、网页搭建、任务系统、研发管理"><meta name="Description" content="Coding.net 是一个面向开发者的云端开发平台，提供 Git/SVN 代码托管、任务管理、在线 WebIDE、Cloud Studio、开发协作、文件管理、Wiki 管理、提供个人服务及企业版本的服务"><meta name="QINIU_UPLOAD_URL" content="https://up.qbox.me"><meta name="OWNER" content="coding"><meta name="OWAS_SERVICE_URL" content="https://owas.coding.net/op/view.aspx"><meta name="PRIVATE_CLOUD" content=""><meta name="AGILE_CLOSE" content=""><meta name="TESTING_CLOSE" content=""><meta name="CODE_CLOSE" content=""><meta name="QTA_CLOSE" content=""><meta name="CI_CLOSE" content=""><meta name="CD_CLOSE" content=""><meta name="ARTIFACT_CLOSE" content=""><meta name="FILE_CLOSE" content=""><meta name="WIKI_CLOSE" content=""><meta name="API_DOC_CLOSE" content=""><meta name="STATISTICS_CLOSE" content=""><meta name="CODE_ANALYSIS_CLOSE" content=""><meta name="IS_SINGLE_TEAM" content="false"><meta name="HOSTNAME" content="0f4d52314cb3"><meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1"><link rel="icon" type="image/x-icon" href="https://assets.codehub.cn/static/favicon.ico"><link rel="shortcut icon" type="image/x-icon" href="https://assets.codehub.cn/static/favicon.ico"><title>CODING | 一站式软件研发管理平台</title><script>window.PDFJS_WORKER_SRC=void 0</script><script>!function(t,e,n,i,c,d,g){t.gdt||((c=t.gdt=function(){c.tk?c.tk.apply(c,arguments):c.queue.push(arguments)}).sv="1.0",c.bt=0,c.queue=[],(d=e.createElement(n)).async=!0,d.src="//qzonestyle.gtimg.cn/qzone/biz/gdt/dmp/user-action/gdtevent.min.js",(g=e.getElementsByTagName(n)[0]).parentNode.insertBefore(d,g))}(window,document,"script"),gdt("init","1110244662"),gdt("track","PAGE_VIEW")</script><noscript><img height="1" width="1" style="display:none" src="https://a.gdt.qq.com/pixel?user_action_set_id=1110244662&action_type=PAGE_VIEW&noscript=1"/></noscript><link href="https://assets.codehub.cn/static-enterprise/css/index.2cfa6d6e.chunk.css" rel="stylesheet"></head><body><div id="container"></div><script>var ua=window.navigator.userAgent.toLowerCase(),isIE=-1<ua.indexOf("msie ")||-1<ua.indexOf("trident/");if(isIE){var container=document.querySelector("#container");document.body.removeChild(container);var ref=encodeURIComponent(window.location.href);window.location.href="/unsupported-browser.html?ref="+ref}</script><script>setTimeout(function() {
+        const PRIVATE_CLOUD = document.head.querySelector('[name=PRIVATE_CLOUD]').content;
+        if (PRIVATE_CLOUD === 'true') {
+            return;
+        }
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments);
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-65952334-7', 'auto', { allowLinker: true });
+        ga('set', 'displayFeaturesTask', null); // 需要在 create 命令后且在 send 命令前设置
+        ga('require', 'linkid');
+        ga('require', 'urlChangeTracker');
+        ga('require', 'linker');
+        ga('linker:autoLink', ['e.coding.net', 'coding.net', 'feie.work']);
+        ga('send', 'pageview');
+    }, 0);</script><script type="text/javascript" src="https://assets.codehub.cn/static-enterprise/js/runtime~index.c0ab753c.js"></script><script type="text/javascript" src="https://assets.codehub.cn/static-enterprise/js/index.e04d336e.chunk.js"></script></body></html>

@@ -18,17 +18,17 @@ tags: [Hexo,yilia,gitment,gitalk]
 
 进行注册。注册界面如下。
 
-![](https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/OAuthRegister1.png)
+![](https://cloudy-liu.coding.net/p/BlogPicBed/d/BlogPicBed/git/raw/master/OAuthRegister1.png)
 
 注册成功后，会获取到 `Client ID/scerct` 。如下图所示，接下来就是将信息填入配置文件中。
 
-![](https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/clientID.png)
+![](https://cloudy-liu.coding.net/p/BlogPicBed/d/BlogPicBed/git/raw/master/clientID.png)
 
 ###  配置 `_config.yml` 文件
 
 打开`themes\yilia\_config.yml` ,在如下位置填入正确的信息即可。
 
-![](https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/config.png)
+![](https://cloudy-liu.coding.net/p/BlogPicBed/d/BlogPicBed/git/raw/master/config.png)
 
 * `gitment_owner`: 填写你的 github 账户名即可
 * `gitment_repo`: repo 名字为可新建一个repo 或者使用博客托管的 repo 都行。
@@ -46,7 +46,7 @@ hexo g -d
 
 部署后，每次文章的评论都会需要初始化，但是试验是发现初始化失败，查找资料后，发现是 github issue 本身的规则限制（label 的长度最长为50），可参考[Gitment评论功能接入踩坑教程](https://www.jianshu.com/p/57afa4844aaa) 。
 
-![](https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/validfail.png)
+![](https://cloudy-liu.coding.net/p/BlogPicBed/d/BlogPicBed/git/raw/master/validfail.png)
 
 解决方法，将 github issue 的 id 改为按照日期方式。
 
@@ -65,6 +65,6 @@ ar gitment = new Gitment({
 
 [gitalk](https://github.com/gitalk/gitalk/) 风格感觉更加好看，维护的也比较勤。具体的配置方法，请参考 [Hexo主题yilia增加gitalk评论插件 ](https://ziven.cc/2018/07/03/Hexo%E4%B8%BB%E9%A2%98yilia%E5%A2%9E%E5%8A%A0gitalk%E8%AF%84%E8%AE%BA%E6%8F%92%E4%BB%B6/) 。然后重新部署`hexo d -g` 生成之后的样式如下。
 
-![](https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/gitalk_test.png)
+![](https://cloudy-liu.coding.net/p/BlogPicBed/d/BlogPicBed/git/raw/master/gitalk_test.png)
 
 (完）

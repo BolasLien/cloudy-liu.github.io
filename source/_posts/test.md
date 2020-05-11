@@ -22,7 +22,7 @@ tags: [Hexo,Test]
 
 
 
-![](https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/head.jpeg)
+![](https://cloudy-liu.coding.net/p/BlogPicBed/d/BlogPicBed/git/raw/master/head.jpeg)
 
 
 
@@ -62,6 +62,5 @@ $x=\dfrac{ -b \pm \sqrt{b^2 - 4ac}} {2a}$
 # 插入音乐测试
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=409654891&auto=0&height=66"></iframe>
-
 # 版权测试
 
