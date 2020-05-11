@@ -16,7 +16,7 @@
 <meta property="og:description" content="在用 Hexo 搭建完毕后，接着就寻找主题了，对比了几个主题">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://www.liuyun.fun/images/og_image.png">
-<meta property="og:updated_time" content="2019-09-15T12:36:54.096Z">
+<meta property="og:updated_time" content="2020-05-11T16:36:03.971Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo yilia 主题一揽子使用方案">
 <meta name="twitter:description" content="在用 Hexo 搭建完毕后，接着就寻找主题了，对比了几个主题">
@@ -161,7 +161,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    10 分钟 读完 (大约 1543 个字)
+                    10 分钟 读完 (大约 1554 个字)
                 </span>
                 
                 
@@ -181,7 +181,7 @@
         <div class="content">
             <p>在用 Hexo 搭建完毕后，接着就寻找主题了，对比了几个主题<a id="more"></a> ，发现这个<a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="noopener">yilia</a>  主题比较干净，简洁，于是就选了这个主题，但是有些细节不太习惯，于是就研究调整了一下，就是现在这个博客的样子。</p>
 <h2 id="查看所有文件，提示缺失模块"><a href="#查看所有文件，提示缺失模块" class="headerlink" title="查看所有文件，提示缺失模块"></a>查看所有文件，提示缺失模块</h2><p><code>yilia</code> 在首次使用时，点击<code>所有文章</code> 时，会出现模块找不到的错误，可按照提示操作即可<br>注意一下，_config.yml 路径是指 根目录下的，而非 <code>yilia</code> 主题下的 config文件</p>
-<p><img src="https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/3_1_yilia_loss_module.png" alt=""></p>
+<p><img src="https://cloudy-liu.coding.net/p/BlogPicBed/d/BlogPicBed/git/raw/master/3_1_yilia_loss_module.png" alt=""></p>
 <h2 id="配置图片资源"><a href="#配置图片资源" class="headerlink" title="配置图片资源"></a>配置图片资源</h2><ul>
 <li><strong>添加图片资源文件夹</strong>。 路径为 <code>themes/yilia/source/</code>下，可添加一个 <code>assets</code> 文件夹，里面存放图片资源即可</li>
 </ul>
@@ -196,11 +196,11 @@
 <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># excerpt_link: more</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>效果</p>
-<p><img src="https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/3_2_yilia_摘要.png" alt=""></p>
+<p><img src="https://cloudy-liu.coding.net/p/BlogPicBed/d/BlogPicBed/git/raw/master/3_2_yilia_摘要.png" alt=""></p>
 </li>
 </ul>
 <h2 id="文章显示目录"><a href="#文章显示目录" class="headerlink" title="文章显示目录"></a>文章显示目录</h2><p>增加文章目录 TOC(table of content )，方便阅读文章, 在 <code>themes/yilia/_config.ym</code>中进行配置 <code>toc: 2</code>即可，它会将你 Markdown 语法的标题，生成目录，目录查看在右下角。</p>
-<p><img src="https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/3_3_yilia_目录.png" alt=""></p>
+<p><img src="https://cloudy-liu.coding.net/p/BlogPicBed/d/BlogPicBed/git/raw/master/3_3_yilia_目录.png" alt=""></p>
 <h2 id="增加归档菜单"><a href="#增加归档菜单" class="headerlink" title="增加归档菜单"></a>增加归档菜单</h2><p>修改 <code>themes/yilia/_config.yml</code> </p>
 <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">    主页:  /</span><br><span class="line">    归档:  /archives/index.html</span><br></pre></td></tr></table></figure>
 <h2 id="修改代码块样式"><a href="#修改代码块样式" class="headerlink" title="修改代码块样式"></a>修改代码块样式</h2><p>默认的代码样式太刺眼了，调成稍微柔和一些的，这里是调成 Atom 风格，以下为两种方式都可以，推荐第一种直接修改编译好的文件，不然还需要重新build。</p>
@@ -208,11 +208,11 @@
 <li><p><strong>直接修改编译好的文件</strong>。路径为： <code>theme\yilia\source\main.0cf68a.css</code></p>
 <ul>
 <li><p>修改代码背景色，搜索 <code>.article-entry .highlight</code>, 修改background后面的颜色</p>
-<p><img src="https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/3_4_code_bg_color.png" alt=""></p>
+<p><img src="https://cloudy-liu.coding.net/p/BlogPicBed/d/BlogPicBed/git/raw/master/3_4_code_bg_color.png" alt=""></p>
 </li>
 <li><p>修改代码字体颜色 <code>.article-entry .highlight .line</code></p>
 </li>
-<li><img src="https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/3_5_code_font_color.png" alt=""></li>
+<li><img src="https://cloudy-liu.coding.net/p/BlogPicBed/d/BlogPicBed/git/raw/master/3_5_code_font_color.png" alt=""></li>
 </ul>
 </li>
 <li><strong>修改源文件重新build</strong>。上述资源对应源文件为 <code>yilia\source-src\css\highlight.scss</code>，按照如下方式build</li>
@@ -232,32 +232,32 @@
 <h2 id="添加版权信息"><a href="#添加版权信息" class="headerlink" title="添加版权信息"></a>添加版权信息</h2><p><a href="https://blog.zscself.com/2017/01/25/ee4d9ecb/" target="_blank" rel="noopener">点击这个链接</a> 查看</p>
 <h2 id="插入网易云音乐"><a href="#插入网易云音乐" class="headerlink" title="插入网易云音乐"></a>插入网易云音乐</h2><ul>
 <li><p>登入网易云音乐网页版，选择一首歌，点击歌曲详情，点击生成外链播放器</p>
-<p><img src="https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/3_5_wangyiyun.png" alt=""></p>
+<p><img src="https://cloudy-liu.coding.net/p/BlogPicBed/d/BlogPicBed/git/raw/master/3_5_wangyiyun.png" alt=""></p>
 </li>
 <li><p>复制外链代码，插入你需要编辑的 MD 格式文章里面，即可</p>
 </li>
 </ul>
-<p><img src="https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/3_5_wangyiyun_2.png" alt=""></p>
+<p><img src="https://cloudy-liu.coding.net/p/BlogPicBed/d/BlogPicBed/git/raw/master/3_5_wangyiyun_2.png" alt=""></p>
 <h2 id="百度-Google统计-SEO"><a href="#百度-Google统计-SEO" class="headerlink" title="百度/Google统计/SEO"></a>百度/Google统计/SEO</h2><p><a href="http://moxfive.xyz/yelee/5.Vendor/baidu-tongji.html" target="_blank" rel="noopener">点击这个链接</a>查看，这几项都是相同的</p>
 <h2 id="七牛云图床"><a href="#七牛云图床" class="headerlink" title="七牛云图床"></a>七牛云图床</h2><p>博客内容最麻烦的就是插入图片，我们可以使用七牛云提供的 10G 的免费存储空间，将图片上传上去，然后生成外链，使用 Markdown 的图片引用方法即可，这样文章就脱离了图片编辑，转为在线了。同样一份文章，你部署在 <code>csdn</code> 等其他网页时，直接复制粘贴即可。</p>
 <h3 id="上传图片到七牛云"><a href="#上传图片到七牛云" class="headerlink" title="上传图片到七牛云"></a>上传图片到七牛云</h3><ul>
 <li><p>注册，并完成支付宝实名认证，实名认证后有10G的免费空间，<a href="https://developer.qiniu.com/af/kb/1574/free-credit-information" target="_blank" rel="noopener">认证免费额度</a></p>
 </li>
 <li><p>添加文件。步骤为添加 <code>对象存储</code>, 新建一个存储空间，进入到该空间，点击 <code>内容管理</code>,点击<code>上传文件</code></p>
-<p><img src="https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/3_6_qiniu_1.png" alt=""></p>
+<p><img src="https://cloudy-liu.coding.net/p/BlogPicBed/d/BlogPicBed/git/raw/master/3_6_qiniu_1.png" alt=""></p>
 </li>
 <li><p><strong>生成外链插入到文章中</strong></p>
-<p><img src="https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/3_6_qiniu_2.png" alt=""></p>
+<p><img src="https://cloudy-liu.coding.net/p/BlogPicBed/d/BlogPicBed/git/raw/master/3_6_qiniu_2.png" alt=""></p>
 </li>
 </ul>
 <h3 id="使用-PicGo-自动生成外链"><a href="#使用-PicGo-自动生成外链" class="headerlink" title="使用 PicGo 自动生成外链"></a>使用 <a href="https://github.com/Molunerfinn/PicGo" target="_blank" rel="noopener">PicGo</a> 自动生成外链</h3><p>但是这样通过 web点击上传按钮方式，太效率了，这里使用 <code>PicGo</code> 工具，完成拖动自动生成外链，感谢作者。</p>
 <ul>
 <li><strong>查看你的七牛密钥</strong>。登入七牛云查看密钥 <code>个人面板</code> -&gt; <code>密钥管理</code></li>
 </ul>
-<p><img src="https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/3_6_3_qiniu_key.png" alt=""></p>
+<p><img src="https://cloudy-liu.coding.net/p/BlogPicBed/d/BlogPicBed/git/raw/master/3_6_3_qiniu_key.png" alt=""></p>
 <ul>
 <li><p><strong>PicGo 配置七牛账户</strong>。然后就在上传图，拖动图片进去，即可生成外链，直接插入到文章中即可。</p>
-<p><img src="https://coding.net/u/cloudy-liu/p/BlogPicBed/git/raw/master/3_6_qiniu_config.png" alt=""></p>
+<p><img src="https://cloudy-liu.coding.net/p/BlogPicBed/d/BlogPicBed/git/raw/master/3_6_qiniu_config.png" alt=""></p>
 </li>
 </ul>
 <h2 id="Demo测试"><a href="#Demo测试" class="headerlink" title="Demo测试"></a>Demo测试</h2><p>修改配置后，输入以下三条命令即可部署</p>
@@ -328,8 +328,8 @@
         
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2018/03/11/从经济学思维出发_/">
-                <span class="level-item">从经济学思维出发</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2018/02/27/test/">
+                <span class="level-item">博文样式测试</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -362,11 +362,12 @@
 </div>
 </div>
                 
+                
 
 
 
 
-<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-3 column-right ">
     
         
 <div class="card widget column-left is-sticky" id="toc">
@@ -454,13 +455,8 @@
 
     
     
-        <div class="column-right-shadow is-hidden-widescreen ">
-        
-        </div>
-    
 </div>
 
-                
             </div>
         </div>
     </section>

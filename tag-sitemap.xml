@@ -2,62 +2,6 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>https://www.liuyun.fun/tags/%E5%8C%97%E5%A4%A7%E7%BB%8F%E6%B5%8E%E5%AD%A6/</loc>
-        <lastmod>2019-05-22T00:59:49.388Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.liuyun.fun/tags/%E4%B8%83%E7%89%9B%E4%BA%91/</loc>
-        <lastmod>2019-05-23T17:02:55.058Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.liuyun.fun/tags/gitment/</loc>
-        <lastmod>2019-06-22T13:13:54.734Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.liuyun.fun/tags/gitalk/</loc>
-        <lastmod>2019-06-22T13:13:54.734Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.liuyun.fun/tags/github/</loc>
-        <lastmod>2019-06-22T13:15:27.275Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.liuyun.fun/tags/%E5%8D%9A%E5%AE%A2/</loc>
-        <lastmod>2019-06-22T13:15:27.275Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.liuyun.fun/tags/%E7%8B%AC%E7%AB%8B%E5%9F%9F%E5%90%8D/</loc>
-        <lastmod>2019-06-22T13:15:27.275Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://www.liuyun.fun/tags/Test/</loc>
-        <lastmod>2019-06-22T14:43:31.784Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://www.liuyun.fun/tags/leetcode/</loc>
         <lastmod>2019-06-22T18:27:25.649Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -79,22 +23,85 @@
     </url>
 
     <url>
+        <loc>https://www.liuyun.fun/tags/icarus/</loc>
+        <lastmod>2020-02-10T13:56:16.764Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.liuyun.fun/tags/github/</loc>
+        <lastmod>2020-05-11T16:36:03.970Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.liuyun.fun/tags/%E5%8D%9A%E5%AE%A2/</loc>
+        <lastmod>2020-05-11T16:36:03.970Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.liuyun.fun/tags/%E7%8B%AC%E7%AB%8B%E5%9F%9F%E5%90%8D/</loc>
+        <lastmod>2020-05-11T16:36:03.970Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://www.liuyun.fun/tags/yilia/</loc>
-        <lastmod>2019-09-15T12:36:54.096Z</lastmod>
+        <lastmod>2020-05-11T16:36:03.973Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.liuyun.fun/tags/%E4%B8%83%E7%89%9B%E4%BA%91/</loc>
+        <lastmod>2020-05-11T16:36:03.973Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.liuyun.fun/tags/gitment/</loc>
+        <lastmod>2020-05-11T16:36:03.973Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.liuyun.fun/tags/gitalk/</loc>
+        <lastmod>2020-05-11T16:36:03.973Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://www.liuyun.fun/tags/Hexo/</loc>
-        <lastmod>2020-02-10T13:56:16.764Z</lastmod>
+        <lastmod>2020-05-11T16:36:03.976Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://www.liuyun.fun/tags/icarus/</loc>
-        <lastmod>2020-02-10T13:56:16.764Z</lastmod>
+        <loc>https://www.liuyun.fun/tags/Test/</loc>
+        <lastmod>2020-05-11T16:36:03.976Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.liuyun.fun/tags/Android/</loc>
+        <lastmod>2020-05-11T17:48:09.775Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://www.liuyun.fun/tags/Framework/</loc>
+        <lastmod>2020-05-11T17:48:09.775Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
